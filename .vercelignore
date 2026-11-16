@@ -1,3 +1,9 @@
+# Heavy assets not used by the site (images served from optimized/{webp,avif}/uploads)
+optimized/original/
+optimized/webp/Projectos/
+optimized/avif/Projectos/
+Projectos/
+
 # Server-side code — not part of the static site
 server.js
 storage.js

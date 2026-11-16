@@ -9,9 +9,13 @@ logs/
 *.log
 data/backups/
 
-# Optimized assets are generated but not referenced by the site yet
-# (remove this line when the HTML starts using optimized/ paths)
-optimized/
+# Optimized assets: ship only WebP + AVIF uploads (~24 MB), skip the rest
+optimized/*
+!optimized/webp/
+!optimized/avif/
+optimized/webp/Projectos/
+optimized/avif/Projectos/
+optimized/original/
 
 # Vercel / local environment
 .vercel

@@ -206,6 +206,7 @@ html[data-theme="light"] .project-frame__preview { background: rgba(246,245,238,
   .project-footer__control--next { justify_content: center; }
 }
 </style>
+  <script src="/media.js"></script>
 </head>
 <body>
 <div class="grain" aria-hidden="true"></div>
@@ -411,11 +412,15 @@ function renderProject(project) {
       if (f.mediaType === "text") {
         mediaHtml = '<div class="project-frame__media project-frame__media--text">' + escapeHtml(f.body) + '</div>';
       } else if (f.mediaType === "video") {
-        mediaHtml = '<div class="project-frame__media project-frame__media--previewable"><video src="' + escapeHtml(f.src) + '" muted loop autoplay playsinline preload="auto" data-lightbox-src="' + escapeHtml(f.src) + '" data-lightbox-caption="' + escapeHtml(f.caption || "") + '" data-lightbox-type="video"></video><button class="project-frame__preview" aria-label="Ver em tamanho real"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg></button></div>';
+        mediaHtml = '<div class="project-frame__media project-frame__media--previewable"><video data-kavita-lazy data-src="' + escapeHtml(f.src) + '" muted loop playsinline preload="none" data-lightbox-src="' + escapeHtml(f.src) + '" data-lightbox-caption="' + escapeHtml(f.caption || "") + '" data-lightbox-type="video"></video><button class="project-frame__preview" aria-label="Ver em tamanho real"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg></button></div>';
       } else if (f.mediaType === "youtube") {
         mediaHtml = '<div class="project-frame__media project-frame__media--previewable project-frame__media--youtube"><iframe src="' + escapeHtml(youtubeEmbedUrl(f.src)) + '" title="' + escapeHtml(f.caption || "Vídeo do YouTube") + '" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen data-lightbox-src="' + escapeHtml(youtubeEmbedUrl(f.src)) + '" data-lightbox-caption="' + escapeHtml(f.caption || "") + '" data-lightbox-type="youtube"></iframe><button class="project-frame__preview" aria-label="Ver em tamanho real"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg></button></div>';
       } else {
-        mediaHtml = '<div class="project-frame__media project-frame__media--previewable"><img src="' + escapeHtml(f.src) + '" alt="' + escapeHtml(f.caption || project.title) + '" data-lightbox-src="' + escapeHtml(f.src) + '" data-lightbox-caption="' + escapeHtml(f.caption || "") + '" data-lightbox-type="image" /><button class="project-frame__preview" aria-label="Ver em tamanho real"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg></button></div>';
+        mediaHtml = '<div class="project-frame__media project-frame__media--previewable">' +
+          kavitaMedia.picture(f.src,
+            'alt="' + escapeHtml(f.caption || project.title) + '" data-lightbox-src="' + escapeHtml(f.src) +
+            '" data-lightbox-caption="' + escapeHtml(f.caption || "") + '" data-lightbox-type="image"') +
+          '<button class="project-frame__preview" aria-label="Ver em tamanho real"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg></button></div>';
       }
       var copyHtml = "";
       if (f.caption || f.body) {
@@ -486,6 +491,7 @@ function renderProject(project) {
   }
 
   document.getElementById("projectMain").innerHTML = nav + hero + info + framesHtml + strip + footer;
+  kavitaMedia.initVideos();
   markTransparentImages(document.getElementById("projectMain"), ".project-frame__media");
 
   /* lightbox full-view: injeta o overlay depois de renderizar a página */

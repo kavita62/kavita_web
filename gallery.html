@@ -203,6 +203,7 @@
       .gallery-footer__control { justify-content: center; }
     }
   </style>
+  <script src="/media.js"></script>
 </head>
 <body>
   <div class="grain" aria-hidden="true"></div>
@@ -401,9 +402,9 @@
 
       var heroHtml = '';
       if (coverVideo) {
-        heroHtml = '<video class="gallery-hero__cover-video" src="' + escapeHtml(coverVideo) + '" muted loop autoplay playsinline preload="auto"></video>';
+        heroHtml = '<video class="gallery-hero__cover-video" src="' + escapeHtml(coverVideo) + '" muted loop autoplay playsinline preload="metadata"></video>';
       } else if (coverImage) {
-        heroHtml = '<img class="gallery-hero__image" src="' + escapeHtml(coverImage) + '" alt="Capa da galeria" />';
+        heroHtml = kavitaMedia.picture(coverImage, 'class="gallery-hero__image" alt="Capa da galeria"');
       } else {
         var first = items[0];
         if (first && first.src && (first.type === "video" || first.type === "youtube")) {
@@ -411,7 +412,7 @@
           var isYt = first.type === "youtube";
           heroHtml = isYt
             ? '<iframe class="gallery-hero__cover-video" src="' + escapeHtml(videoSrc) + '" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>'
-            : '<video class="gallery-hero__cover-video" src="' + escapeHtml(videoSrc) + '" muted loop autoplay playsinline preload="auto"></video>';
+            : '<video class="gallery-hero__cover-video" src="' + escapeHtml(videoSrc) + '" muted loop autoplay playsinline preload="metadata"></video>';
         } else {
           heroHtml = '<video class="gallery-hero__video" src="https://cdn.pixabay.com/video/2025/11/24/317899_medium.mp4" muted loop autoplay playsinline preload="metadata"></video>';
         }
@@ -452,9 +453,13 @@
         } else if (it.type === "youtube") {
           mediaHtml = '<div class="gallery-frame__media gallery-frame__media--previewable"><iframe src="' + escapeHtml(youtubeEmbedUrl(it.src)) + '" title="' + escapeHtml(label) + '" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" data-lightbox-src="' + escapeHtml(youtubeEmbedUrl(it.src)) + '" data-lightbox-type="youtube" data-lightbox-caption="' + escapeHtml(it.caption || "") + '"></iframe><button class="gallery-frame__preview" aria-label="Ver em tamanho real"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg></button></div>';
         } else if (it.type === "video") {
-          mediaHtml = '<div class="gallery-frame__media gallery-frame__media--previewable"><video src="' + escapeHtml(it.src) + '" muted loop autoplay playsinline preload="auto" data-lightbox-src="' + escapeHtml(it.src) + '" data-lightbox-type="video" data-lightbox-caption="' + escapeHtml(it.caption || "") + '"></video><button class="gallery-frame__preview" aria-label="Ver em tamanho real"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg></button></div>';
+          mediaHtml = '<div class="gallery-frame__media gallery-frame__media--previewable"><video data-kavita-lazy data-src="' + escapeHtml(it.src) + '" muted loop playsinline preload="none" data-lightbox-src="' + escapeHtml(it.src) + '" data-lightbox-type="video" data-lightbox-caption="' + escapeHtml(it.caption || "") + '"></video><button class="gallery-frame__preview" aria-label="Ver em tamanho real"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg></button></div>';
         } else {
-          mediaHtml = '<div class="gallery-frame__media gallery-frame__media--previewable"><img src="' + escapeHtml(it.src) + '" alt="' + escapeHtml(label) + '" data-lightbox-src="' + escapeHtml(it.src) + '" data-lightbox-type="image" data-lightbox-caption="' + escapeHtml(it.caption || "") + '" /><button class="gallery-frame__preview" aria-label="Ver em tamanho real"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg></button></div>';
+          mediaHtml = '<div class="gallery-frame__media gallery-frame__media--previewable">' +
+            kavitaMedia.picture(it.src,
+              'alt="' + escapeHtml(label) + '" data-lightbox-src="' + escapeHtml(it.src) +
+              '" data-lightbox-type="image" data-lightbox-caption="' + escapeHtml(it.caption || "") + '"') +
+            '<button class="gallery-frame__preview" aria-label="Ver em tamanho real"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg></button></div>';
         }
 
         var copyHtml = "";
@@ -473,6 +478,7 @@
           '</article>';
       });
       framesEl.innerHTML = framesHtml;
+      kavitaMedia.initVideos();
       markTransparentImages(framesEl, ".gallery-frame__media");
 
       framesEl.querySelectorAll("[data-lightbox-src]").forEach(function (el) {

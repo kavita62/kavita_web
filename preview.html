@@ -516,6 +516,7 @@ button { border: 0; font: inherit; }
 
 
 </style>
+  <script src="/media.js"></script>
 </head>
 <body>
 <main class="site-shell">
@@ -582,9 +583,9 @@ button { border: 0; font: inherit; }
         </div>
 
         <div class="hero__reel hero__reel--hidden" id="heroReel" data-static="true" aria-label="Carrossel horizontal de três vídeos">
-          <div class="hero__reel-card"><video src="https://cdn.pixabay.com/video/2020/05/28/40390-425442522_medium.mp4" muted loop autoplay playsinline preload="metadata"></video><span>01 / MÚSICA</span></div>
-          <div class="hero__reel-card"><video src="https://cdn.pixabay.com/video/2025/11/17/316579_medium.mp4" muted loop autoplay playsinline preload="metadata"></video><span>02 / RETRATO</span></div>
-          <div class="hero__reel-card"><video src="https://cdn.pixabay.com/video/2021/05/28/75547-556034400_medium.mp4" muted loop autoplay playsinline preload="metadata"></video><span>03 / MOVIMENTO</span></div>
+          <div class="hero__reel-card"><video data-kavita-lazy data-src="https://cdn.pixabay.com/video/2020/05/28/40390-425442522_medium.mp4" muted loop playsinline preload="none"></video><span>01 / MÚSICA</span></div>
+          <div class="hero__reel-card"><video data-kavita-lazy data-src="https://cdn.pixabay.com/video/2025/11/17/316579_medium.mp4" muted loop playsinline preload="none"></video><span>02 / RETRATO</span></div>
+          <div class="hero__reel-card"><video data-kavita-lazy data-src="https://cdn.pixabay.com/video/2021/05/28/75547-556034400_medium.mp4" muted loop playsinline preload="none"></video><span>03 / MOVIMENTO</span></div>
         </div>
 
         <div class="hero__video-caption"><span id="capTitle">Novas silhuetas</span><span id="capTag">MODA / FORMA</span></div>
@@ -803,8 +804,9 @@ button { border: 0; font: inherit; }
     reelCards.forEach(function (card, index) {
       var video = card.querySelector("video");
       var url = reelUrls[index];
-      if (video && url) video.src = url;
+      if (video && url) { video.setAttribute("data-src", url); video.removeAttribute("src"); }
     });
+    kavitaMedia.initVideos();
 
     /* ---- flow track (6 cards, 3 repeated twice) ---- */
     var track = document.getElementById("flowTrack");
@@ -815,11 +817,12 @@ button { border: 0; font: inherit; }
         flowUrls.forEach(function (url, index) {
           var label = pad(index + 1) + " / FLUXO";
           flowHtml += '<div class="hero__flow-card hero__flow-card--' + (index % 3) + '">' +
-            '<video src="' + escapeAttr(url) + '" muted loop autoplay playsinline preload="metadata"></video>' +
+            '<video data-kavita-lazy data-src="' + escapeAttr(url) + '" muted loop playsinline preload="none"></video>' +
             "<span>" + escapeHtml(label) + "</span></div>";
         });
       }
       track.innerHTML = flowHtml;
+      kavitaMedia.initVideos();
     }
 
     /* ---- about section ---- */
@@ -856,7 +859,9 @@ button { border: 0; font: inherit; }
     if (aboutMark && home.aboutImage && !aboutMark.querySelector(".about-section__image")) {
       var img = document.createElement("img");
       img.className = "about-section__image";
-      img.src = home.aboutImage;
+      img.src = kavitaMedia.src(home.aboutImage);
+      img.loading = "lazy";
+      img.decoding = "async";
       img.alt = "Imagem de Gerson Geremias Uchila";
       aboutMark.insertBefore(img, aboutMark.firstChild);
     }
@@ -957,7 +962,7 @@ button { border: 0; font: inherit; }
     still.className = "work-card__still";
     still.setAttribute("aria-hidden", "true");
     if (v.cover && !isCoverVid) {
-      still.style.backgroundImage = "url(" + v.cover + ")";
+      still.style.backgroundImage = "url(" + kavitaMedia.src(v.cover) + ")";
       still.style.backgroundSize = "cover";
       still.style.backgroundPosition = "center";
     }
