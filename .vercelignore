@@ -1,0 +1,29 @@
+# Server-side code — not part of the static site
+server.js
+storage.js
+storage_v2.js
+server/
+client/src/
+server.js.bak
+
+# Build / dev tooling
+*.py
+*.ts
+vite.config.ts.bak
+patches/
+scripts/
+drizzle/
+template.json
+tsconfig.json
+vitest.config.ts
+app.config.ts
+drizzle.config.ts
+pnpm-lock.yaml
+package-lock.json
+pnpm-workspace.yaml
+
+# Runtime leftovers
+.tmp-uploads/
+logs/
+data/backups/
+.git/

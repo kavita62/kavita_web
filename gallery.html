@@ -266,7 +266,7 @@
 
     async function loadSiteContent() {
       try {
-        var res = await fetch('/api/site-content');
+        var res = await fetch('/data/site-content.json');
         if (res.ok) {
           var data = await res.json();
           if (data && Array.isArray(data.projects) && data.homepage) return data;

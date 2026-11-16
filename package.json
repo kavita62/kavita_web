@@ -2,7 +2,6 @@
   "name": "kavita-uchila-static",
   "version": "1.0.0",
   "description": "Kavita Uchila - Visual Studio Website with Admin Backend",
-  "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "dev": "node server.js"

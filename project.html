@@ -229,7 +229,7 @@ html[data-theme="light"] .project-frame__preview { background: rgba(246,245,238,
 <script src="lightbox-zoom.js"></script>
 <script>
 /* ============================================================
-   CONTEUDO DO PAINEL — carrega via API /api/site-content (fallback localStorage + IndexedDB)
+   CONTEUDO DO PAINEL — carrega via API /data/site-content.json (fallback localStorage + IndexedDB)
    ============================================================ */
 var ADMIN_KEY = "kavita-admin-content";
 var mediaCache = {};
@@ -237,7 +237,7 @@ var mediaCache = {};
 // Load from API, fallback to localStorage
 async function loadSiteContent() {
   try {
-    var res = await fetch('/api/site-content');
+    var res = await fetch('/data/site-content.json');
     if (res.ok) {
       var data = await res.json();
       if (data && Array.isArray(data.projects) && data.homepage) return data;

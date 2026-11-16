@@ -701,7 +701,7 @@ button { border: 0; font: inherit; }
 
   /* ============================================================
      CONTEUDO DO PAINEL
-     Carrega via API /api/site-content (fallback localStorage + IndexedDB).
+     Carrega via API /data/site-content.json (fallback localStorage + IndexedDB).
      ============================================================ */
   var ADMIN_KEY = "kavita-admin-content";
   var mediaCache = {};
@@ -709,7 +709,7 @@ button { border: 0; font: inherit; }
   // Load from API, fallback to localStorage
   async function loadSiteContent() {
     try {
-      var res = await fetch('/api/site-content');
+      var res = await fetch('/data/site-content.json');
       if (res.ok) {
         var data = await res.json();
         if (data && Array.isArray(data.projects) && data.homepage) return data;
