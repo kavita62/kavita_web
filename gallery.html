@@ -457,7 +457,7 @@
         } else {
           mediaHtml = '<div class="gallery-frame__media gallery-frame__media--previewable">' +
             kavitaMedia.picture(it.src,
-              'alt="' + escapeHtml(label) + '" data-lightbox-src="' + escapeHtml(it.src) +
+              'alt="' + escapeHtml(label) + '" data-lightbox-src="' + escapeHtml(kavitaMedia.src(it.src)) +
               '" data-lightbox-type="image" data-lightbox-caption="' + escapeHtml(it.caption || "") + '"') +
             '<button class="gallery-frame__preview" aria-label="Ver em tamanho real"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg></button></div>';
         }
@@ -520,7 +520,7 @@
       lightboxIframe.src = "about:blank";
 
       if (kind === "video") {
-        lightboxVideo.src = it.src;
+        lightboxVideo.src = kavitaMedia.src(it.src);
         lightboxVideo.style.display = "block";
         lightboxVideo.play().catch(function () {});
       } else if (kind === "youtube") {
@@ -530,7 +530,7 @@
         lightboxText.textContent = it.body || "";
         lightboxText.style.display = "block";
       } else {
-        lightboxImg.src = it.src;
+        lightboxImg.src = kavitaMedia.src(it.src);
         lightboxImg.alt = it.caption || "";
         lightboxImg.style.display = "block";
       }

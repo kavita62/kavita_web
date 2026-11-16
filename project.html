@@ -418,7 +418,7 @@ function renderProject(project) {
       } else {
         mediaHtml = '<div class="project-frame__media project-frame__media--previewable">' +
           kavitaMedia.picture(f.src,
-            'alt="' + escapeHtml(f.caption || project.title) + '" data-lightbox-src="' + escapeHtml(f.src) +
+            'alt="' + escapeHtml(f.caption || project.title) + '" data-lightbox-src="' + escapeHtml(kavitaMedia.src(f.src)) +
             '" data-lightbox-caption="' + escapeHtml(f.caption || "") + '" data-lightbox-type="image"') +
           '<button class="project-frame__preview" aria-label="Ver em tamanho real"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg></button></div>';
       }
