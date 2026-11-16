@@ -6,10 +6,11 @@ não persiste alterações (filesystem da Vercel é read-only).
 ## O que já está preparado no projeto
 
 - `.gitignore` — exclui `node_modules/`, temporários, logs, `optimized/` (168 MB, ainda não usado)
-- `vercel.json` — reescreve `/` e `/preview` para `preview.html`, e **desativa install/build**
-  da Vercel (o `pnpm-lock.yaml` está desatualizado face ao `package.json`, e o deploy
-  não precisa de dependências: é site estático + uma função Node sem dependências)
-- `api/site-content.js` — expõe `data/site-content.json` em `/api/site-content`
+- `vercel.json` — reescreve `/` e `/preview` para `preview.html`, e `/api/site-content`
+  para `/data/site-content.json`. **Não há funções serverless**: o JSON é servido como
+  ficheiro estático, o que evita erros `500 FUNCTION_INVOCATION_FAILED`.
+- `pnpm-lock.yaml` + `pnpm-workspace.yaml` — regenerados/limpos para o `pnpm install
+  --frozen-lockfile` passar sem erro.
 - `uploads/` (293 MB) permanece no repo — é usado pelo site
 
 ## Antes de começar
@@ -54,8 +55,8 @@ Para autenticar em HTTPS, o GitHub exige um **Personal Access Token** como passw
    (se não aparecer, autoriza a GitHub App da Vercel na conta/organização)
 3. Framework Preset: **Other**
 4. Root Directory: `./`
-5. Build Command e Install Command: **vazios** (já ignorados via `vercel.json`)
-   |  Output Directory: **vazio**
+5. Build Command: **vazio**  |  Output Directory: **vazio**
+   (o `pnpm install` corre normalmente e agora passa com o lockfile corrigido)
 6. Clica **Deploy**
 
 > **Correção aplicada ao lockfile (importante):** o `pnpm-lock.yaml` era do template
@@ -78,7 +79,7 @@ vercel --prod   # deploy de produção
 
 - `/` → homepage (`preview.html`)
 - `/gallery.html`, `/project.html`, `/admin.html` → páginas estáticas
-- `/api/site-content` → JSON com 12 projetos
+- `/api/site-content` → JSON com 12 projetos (rewrite estático para `data/site-content.json`)
 - `/uploads/<hash>.jpg` → assets servidos diretamente
 
 ## Limitações conhecidas
