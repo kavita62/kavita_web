@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Temp / runtime artifacts
+.tmp-uploads/
+logs/
+*.log
+data/backups/
+
+# Optimized assets are generated but not referenced by the site yet
+# (remove this line when the HTML starts using optimized/ paths)
+optimized/
+
+# Vercel / local environment
+.vercel
+.env
+.env.local
+.env.*.local
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
