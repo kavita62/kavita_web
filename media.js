@@ -40,33 +40,78 @@
         base + '</picture>';
     },
 
+    /** True on phones / portrait screens - carousel videos stay off there. */
+    isVertical: function () {
+      return !!(window.matchMedia &&
+        window.matchMedia('(orientation: portrait), (max-width: 620px)').matches);
+    },
+
+    /** Carousel (hero flow + reel) videos, which we skip on vertical screens. */
+    _isCarousel: function (v) {
+      return !!(v.closest && v.closest('#flowTrack, #heroReel'));
+    },
+
     /** Pause videos that scroll out of view; play the ones that enter. */
     initVideos: function () {
       var vids = document.querySelectorAll('video[data-kavita-lazy]');
       if (!vids.length) return;
+      var vertical = api.isVertical();
+
+      // Hide carousel video elements on vertical screens (CSS backgrounds remain).
+      if (!api._styleInjected) {
+        var style = document.createElement('style');
+        style.textContent = '@media (orientation: portrait), (max-width: 620px){' +
+          '.hero__flow-card video,.hero__reel-card video{display:none}}';
+        document.head.appendChild(style);
+        api._styleInjected = true;
+      }
+
+      function blocked(v) { return vertical && api._isCarousel(v); }
+
+      vids.forEach(function (v) {
+        if (!blocked(v)) return;
+        v.pause();
+        if (v.hasAttribute('src')) { v.removeAttribute('src'); v.load(); }
+        v.setAttribute('data-kavita-lazy', 'paused');
+      });
+
       if (!('IntersectionObserver' in window)) {
-        vids.forEach(function (v) { var p = v.play(); if (p && p.catch) p.catch(function () {}); });
+        vids.forEach(function (v) {
+          if (blocked(v)) return;
+          var src = v.getAttribute('data-src');
+          if (src && !v.src) v.src = src;
+          var p = v.play(); if (p && p.catch) p.catch(function () {});
+        });
         return;
       }
+
       if (api._videoObserver) api._videoObserver.disconnect();
       api._videoObserver = new IntersectionObserver(function (entries) {
         entries.forEach(function (e) {
           var v = e.target;
+          if (blocked(v)) { v.pause(); return; }
           if (e.isIntersecting) {
             var src = v.getAttribute('data-src');
             if (src && !v.src) v.src = src;
-            if (v.getAttribute('data-kavita-lazy') !== 'paused') {
-              var p = v.play();
-              if (p && p.catch) p.catch(function () {});
-            }
+            v.setAttribute('data-kavita-lazy', 'auto');
+            var p = v.play();
+            if (p && p.catch) p.catch(function () {});
           } else {
             v.pause();
           }
         });
       }, { rootMargin: '150px', threshold: 0.05 });
-      vids.forEach(function (v) { api._videoObserver.observe(v); });
+      vids.forEach(function (v) { if (!blocked(v)) api._videoObserver.observe(v); });
     }
   };
+
+  // Re-evaluate when the device is rotated / viewport crosses the breakpoint.
+  var lastVertical = api.isVertical();
+  window.addEventListener('orientationchange', function () { setTimeout(api.initVideos, 120); });
+  window.addEventListener('resize', function () {
+    var now = api.isVertical();
+    if (now !== lastVertical) { lastVertical = now; api.initVideos(); }
+  });
 
   window.kavitaMedia = api;
 })();
