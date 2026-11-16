@@ -32,6 +32,15 @@ Se o projeto Vercel já existir, faz um **Redeploy** depois do push (Deployments
 - `/gallery.html`, `/project.html`, `/admin.html` → HTTP 200
 - `/data/site-content.json` → JSON com 12 projetos
 
+## Performance (P0 + P1)
+
+- `media.js` mapeia `/uploads/<hash>.<ext>` → WebP/AVIF em `optimized/{webp,avif}/uploads/`
+- Todas as 142 imagens referenciadas têm versões WebP + AVIF (`scripts/generate-optimized.mjs`)
+- `<picture>` com `source` AVIF/WebP + `loading="lazy"` e `decoding="async"`
+- Vídeos de galeria/projeto usam `data-src` + IntersectionObserver (preload `none`)
+- Deploy envia só WebP/AVIF (~24 MB) — `optimized/original` e `Projectos/` excluídos via `.vercelignore`
+- Ganho medido: 174 MB de imagens → ~5 MB (−97%)
+
 ## Notas
 
 - O painel admin não persiste alterações na Vercel (filesystem read-only). O site
