@@ -58,10 +58,13 @@ Para autenticar em HTTPS, o GitHub exige um **Personal Access Token** como passw
    |  Output Directory: **vazio**
 6. Clica **Deploy**
 
-> Se a Vercel ainda correr `pnpm install` e der `ERR_PNPM_OUTDATED_LOCKFILE`, confirma
-> que o `vercel.json` da pasta raiz foi incluído no push. Alternativa: apagar
-> `pnpm-lock.yaml` e `package-lock.json` do repo, ou regenerar o lockfile com
-> `pnpm install --no-frozen-lockfile`.
+> **Correção aplicada ao lockfile (importante):** o `pnpm-lock.yaml` era do template
+> React original (85+ dependências) e estava dessincronizado do `package.json`.
+> Foi regenerado com `pnpm install --lockfile-only --no-frozen-lockfile` e o
+> `pnpm-workspace.yaml` foi limpo (removido o patch órfão do `wouter` e os overrides
+> do Tailwind). Validação: `pnpm install --frozen-lockfile` termina com exit 0.
+> **Este fix tem de ser commitado e enviado para o remoto** — sem isso o erro
+> `ERR_PNPM_OUTDATED_LOCKFILE` repete-se em qualquer plataforma (Vercel/Manus/CI).
 
 ### Opção B — CLI
 ```bash
