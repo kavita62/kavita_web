@@ -1,0 +1,596 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <meta name="theme-color" content="#080808" />
+  <meta name="description" content="Kavita Uchila — Galeria pessoal de fotos e vídeos" />
+  <title>Kavita Uchila — Galeria</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --lime: #e9ff2f;
+      --ink: #080808;
+      --paper: #e9ff2f;
+      --paper-soft: #d8ed2c;
+      --white: #f6f5ee;
+      --muted: rgba(246, 245, 238, 0.58);
+      --line: rgba(246, 245, 238, 0.22);
+      --mono: "DM Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+      --sans: "Space Grotesk", Arial, Helvetica, sans-serif;
+      color: var(--white);
+      background: var(--ink);
+      font-family: var(--sans);
+      font-synthesis: none;
+      text-rendering: optimizeLegibility;
+    }
+
+    html[data-theme="light"] {
+      --ink: #f6f5ee;
+      --white: #080808;
+      --muted: rgba(8, 8, 8, 0.58);
+      --line: rgba(8, 8, 8, 0.22);
+      color: var(--white);
+      background: var(--ink);
+    }
+    html[data-theme="light"] body,
+    html[data-theme="light"] .site-shell {
+      background: var(--ink);
+      color: var(--white);
+    }
+    html[data-theme="light"] ::selection {
+      color: var(--white);
+      background: var(--paper);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; background: var(--ink); }
+    body { margin: 0; min-width: 320px; background: var(--ink); }
+    a { color: inherit; text-decoration: none; }
+    button { border: 0; font: inherit; cursor: pointer; }
+    ::selection { color: var(--ink); background: var(--paper); }
+
+    .site-shell { min-height: 100vh; background: var(--ink); position: relative; }
+    .grain { position: fixed; inset: 0; z-index: 20; pointer-events: none; opacity: .065; mix-blend-mode: screen; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E"); }
+
+    .topbar { position: fixed; z-index: 30; top: 0; left: 0; right: 0; height: 76px; display: flex; align-items: center; justify-content: space-between; padding: 0 3.2vw; color: var(--white); mix-blend-mode: difference; }
+    .topbar__brand { flex: 0 0 auto; }
+    .eyebrow, .section-number { font: 10px/1.15 var(--mono); letter-spacing: .11em; text-transform: uppercase; }
+    .topnav { display: flex; align-items: center; gap: 2.3vw; }
+    .topnav a { font: 11px/1 var(--mono); letter-spacing: .1em; transition: color .2s ease; }
+    .topnav a:hover { color: var(--paper); }
+    .topnav a span { color: var(--paper); font-size: 8px; margin-left: 4px; }
+
+    .brand-mark { display: inline-flex; align-items: center; gap: 8px; font: 700 17px/.9 var(--sans); letter-spacing: -.08em; }
+    .brand-mark > span:not(.brand-mark__face) { display: block; }
+    .brand-mark > span:last-child { margin-left: -5px; }
+    .brand-mark__face { width: 27px; height: 27px; border: 1.6px solid currentColor; border-radius: 50%; position: relative; display: inline-block; flex: 0 0 auto; }
+    .brand-mark__face i { width: 3px; height: 3px; background: currentColor; border-radius: 50%; position: absolute; top: 8px; }
+    .brand-mark__face i:first-child { left: 7px; }
+    .brand-mark__face i:nth-child(2) { right: 7px; }
+    .brand-mark__face b { width: 10px; height: 5px; border-bottom: 1.4px solid currentColor; border-radius: 0 0 50% 50%; position: absolute; left: 7px; top: 12px; }
+
+    .gallery-page { min-height: 100vh; padding-top: 76px; }
+
+    .gallery-nav { display: flex; align-items: center; justify-content: space-between; padding: 2rem 3.2vw 1rem; gap: 1rem; flex-wrap: wrap; }
+    .gallery-nav__brand { font: 700 17px/.9 var(--sans); letter-spacing: -.08em; color: var(--paper); }
+    .gallery-nav__crumb { color: var(--muted); font: 9px/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; }
+    .gallery-nav__back { display: inline-flex; align-items: center; gap: 6px; color: var(--white); font: 9px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; }
+
+    .gallery-hero { position: relative; isolation: isolate; min-height: 65vh; display: flex; flex-direction: column; justify-content: center; padding: 4rem 3.2vw 6rem; overflow: hidden; }
+    .gallery-hero__video { position: absolute; z-index: 0; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: saturate(.72) contrast(1.1); transform: scale(1.025); pointer-events: none; }
+    .gallery-hero__cover-video { position: absolute; z-index: 0; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: saturate(.6) contrast(1.05) brightness(.7); pointer-events: none; }
+    .gallery-hero__image { position: absolute; z-index: 0; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: saturate(.6) contrast(1.05) brightness(.7); pointer-events: none; }
+    .gallery-hero__image.is-transparent { object-fit: contain; filter: none; }
+    .gallery-hero.is-transparent .gallery-hero__wash { display: none; }
+    .gallery-hero__wash { position: absolute; z-index: 1; inset: 0; background: linear-gradient(180deg, rgba(8,8,8,.4), transparent 40%, rgba(8,8,8,.82)); pointer-events: none; }
+    .gallery-hero__index { position: relative; z-index: 2; font: 9px/1 var(--mono); letter-spacing: .1em; color: var(--muted); text-transform: uppercase; margin-bottom: 1rem; }
+    .gallery-hero__index i { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--paper); margin: 0 6px; vertical-align: middle; }
+    .gallery-hero__title { position: relative; z-index: 2; max-width: 720px; }
+    .gallery-hero__title .eyebrow { color: var(--paper); margin-bottom: 1rem; }
+    .gallery-hero__title h1 { margin: 0; font-size: clamp(4rem, 12vw, 12rem); line-height: .72; font-weight: 700; letter-spacing: -.12em; color: var(--paper); }
+    .gallery-hero__tag { display: block; margin-top: 1.5rem; font: 9px/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--paper); }
+    .gallery-hero__sound { position: relative; z-index: 2; margin-top: 3rem; display: inline-flex; align-items: center; gap: 10px; padding: 14px 20px; border: 1px solid var(--paper); color: var(--ink); background: var(--paper); font: 10px/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; cursor: pointer; transition: transform .2s ease, box-shadow .2s ease; width: fit-content; }
+    .gallery-hero__sound:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(233,255,47,.14); }
+
+    .gallery-info { padding: 4rem 3.2vw; max-width: 980px; margin: 0 auto; }
+    .gallery-info__label { display: flex; align-items: center; gap: 12px; margin-bottom: 2rem; }
+    .gallery-info__description { font-size: clamp(1.1rem, 2.5vw, 1.5rem); line-height: 1.5; color: var(--white); margin-bottom: 3rem; max-width: 720px; }
+    .gallery-info__details { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.5rem; }
+    .gallery-info__details div { display: flex; flex-direction: column; gap: 6px; }
+    .gallery-info__details dt { color: var(--muted); font: 9px/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; }
+    .gallery-info__details dd { margin: 0; font-size: clamp(1rem, 1.5vw, 1.2rem); line-height: 1.3; color: var(--white); }
+
+    .gallery-frames { padding: 0 3.2vw 6rem; max-width: 1440px; margin: 0 auto; }
+    .gallery-frames--cinematic { display: flex; flex-direction: column; gap: 4rem; }
+    .gallery-frames--editorial { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; }
+    .gallery-frames--gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+    .gallery-frames--split { display: flex; flex-direction: column; gap: 3rem; }
+    .gallery-frames--fullscreen { display: flex; flex-direction: column; gap: 4rem; }
+
+    .gallery-frame { position: relative; overflow: hidden; }
+    .gallery-frame--wide { aspect-ratio: 21 / 9; }
+    .gallery-frame--portrait { aspect-ratio: 9 / 16; }
+    .gallery-frame--square { aspect-ratio: 1 / 1; }
+    .gallery-frame--fullscreen { aspect-ratio: 16 / 9; }
+    .gallery-frame--split { aspect-ratio: 2 / 1; }
+
+    .gallery-frame__media { position: absolute; inset: 0; z-index: 0; overflow: hidden; background: #111; }
+    .gallery-frame__media video,
+    .gallery-frame__media img,
+    .gallery-frame__media iframe { width: 100%; height: 100%; object-fit: cover; display: block; filter: saturate(.9) contrast(1.02); }
+    .gallery-frame__media.is-transparent { background: transparent; }
+    .gallery-frame__media.is-transparent img { object-fit: contain; }
+    .gallery-frame__media--text { min-height: 40vh; padding: clamp(2rem, 7vw, 7rem); display: flex; align-items: center; background: var(--lime); color: var(--ink); font-size: clamp(1.5rem, 4vw, 3rem); line-height: 1.1; font-weight: 600; letter-spacing: -.04em; }
+    .gallery-frame__media--youtube { position: absolute; inset: 0; z-index: 0; background: #111; }
+    .gallery-frame__media--youtube iframe { width: 100%; height: 100%; display: block; border: 0; }
+
+    .gallery-frame__copy { position: relative; z-index: 2; padding: 2rem 1.5rem; background: var(--ink); }
+    .gallery-frame__copy strong { display: block; font: 600 14px/1.3 var(--sans); letter-spacing: -.02em; color: var(--paper); margin-bottom: .5rem; }
+    .gallery-frame__copy p { margin: 0; color: var(--white); line-height: 1.6; }
+    .gallery-frame__meta { position: absolute; bottom: 1rem; left: 1rem; right: 1rem; z-index: 4; display: flex; justify-content: space-between; align-items: center; font: 9px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--paper); background: rgba(8,8,8,.65); padding: 6px 10px; border-radius: 4px; }
+    .gallery-frame__item-index { font-weight: 700; }
+    .gallery-frame__item-label { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 60%; }
+
+    .gallery-strip { padding: 4rem 3.2vw; background: rgba(246,245,238,.02); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .gallery-strip__head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2rem; }
+    .gallery-strip__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
+    .gallery-thumb { position: relative; aspect-ratio: 16 / 9; overflow: hidden; border: 1px solid var(--line); background: #111; transition: transform .3s ease, border-color .3s ease; }
+    .gallery-thumb:hover { transform: translateY(-4px); border-color: var(--paper); }
+    .gallery-thumb__cover-video { position: absolute; z-index: 1; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: saturate(.6) contrast(1.05) brightness(.7); pointer-events: none; transition: filter .4s ease, transform .6s ease; }
+    .gallery-thumb video { position: absolute; z-index: 0; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: grayscale(.3) saturate(.8) contrast(1.05); transition: filter .4s ease, transform .6s ease; }
+    .gallery-thumb:hover .gallery-thumb__cover-video { filter: saturate(1) contrast(1.05) brightness(.8); transform: scale(1.05); }
+    .gallery-thumb:hover video { filter: grayscale(0) saturate(1) contrast(1.05); transform: scale(1.05); }
+    .gallery-thumb span { position: absolute; bottom: 1rem; left: 1rem; right: 1rem; font: 9px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--paper); z-index: 1; }
+    .gallery-thumb strong { position: absolute; bottom: 3rem; left: 1rem; right: 1rem; font-size: clamp(1.1rem, 2.5vw, 1.5rem); line-height: 1.1; font-weight: 600; color: var(--white); z-index: 1; }
+    .gallery-thumb svg { position: absolute; bottom: 1rem; right: 1rem; width: 28px; height: 28px; color: var(--paper); z-index: 1; }
+
+    .gallery-footer { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 2rem; padding: 3rem 3.2vw; }
+    .gallery-footer__control { display: flex; align-items: center; gap: 1rem; color: var(--white); text-decoration: none; }
+    .gallery-footer__control:hover { color: var(--paper); }
+    .gallery-footer__control svg { flex-shrink: 0; }
+    .gallery-footer__control span { font: 9px/1.2 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+    .gallery-footer__control strong { display: block; font: 600 clamp(1rem, 1.5vw, 1.3rem)/1.2 var(--sans); letter-spacing: -.04em; color: var(--white); }
+    .gallery-footer__control--next { justify-content: flex-end; }
+    .gallery-footer__center { text-align: center; }
+    .gallery-footer__center strong { display: block; font: 700 17px/.9 var(--sans); letter-spacing: -.08em; color: var(--paper); }
+    .gallery-footer__center small { font: 9px/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+
+    /* Indicador de preview sobreposto nas mídias dos quadros */
+    .gallery-frame__media--previewable { position: relative; }
+    .gallery-frame__preview { position: absolute; bottom: 1rem; right: 1rem; z-index: 3; width: 36px; height: 36px; background: rgba(8,8,8,.65); color: var(--white); border: 1px solid rgba(255,255,255,.4); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; opacity: 0; transition: opacity .25s ease, transform .25s ease; transform: translateY(8px); }
+    .gallery-frame__media--previewable:hover .gallery-frame__preview { opacity: 1; transform: translateY(0); }
+    .gallery-frame__preview svg { width: 14px; height: 14px; }
+    .gallery-frame__media--previewable video,
+    .gallery-frame__media--previewable img,
+    .gallery-frame__media--previewable iframe { cursor: pointer; }
+    html[data-theme="light"] .gallery-frame__preview { background: rgba(246,245,238,.75); color: var(--ink); border-color: rgba(0,0,0,.3); }
+
+    /* Lightbox */
+    .lightbox { position: fixed; inset: 0; z-index: 1000; display: none; align-items: center; justify-content: center; background: rgba(8,8,8,.92); backdrop-filter: blur(4px); padding: 2rem; opacity: 0; transition: opacity .25s ease; }
+    .lightbox.is-open { display: flex; opacity: 1; }
+    .lightbox__content { position: relative; max-width: 95vw; max-height: 85vh; width: auto; height: auto; display: block; }
+    .lightbox__img { display: block; max-width: 100%; max-height: 85vh; width: auto; height: auto; object-fit: contain; filter: saturate(1) contrast(1); }
+    .lightbox__video { display: block; max-width: 100%; max-height: 85vh; width: auto; height: auto; object-fit: contain; background: #000; }
+    .lightbox__iframe { display: block; width: 100%; max-width: 95vw; height: 54vw; max-height: 85vh; background: #000; border: 0; }
+    .lightbox__close { position: absolute; top: 1rem; right: 1rem; width: 44px; height: 44px; background: var(--paper); color: var(--ink); border: 0; border-radius: 50%; font: 700 20px/1 var(--sans); cursor: pointer; display: flex; align-items: center; justify-content: center; line-height: 1; box-shadow: 0 4px 16px rgba(0,0,0,.35); transition: transform .2s ease; }
+    .lightbox__close:hover { transform: scale(1.1); }
+    .lightbox__caption { position: absolute; bottom: 1.1rem; left: 2rem; right: 2rem; text-align: center; color: var(--white); font: 11px/1.4 var(--mono); letter-spacing: .08em; text-transform: uppercase; opacity: .9; pointer-events: none; }
+    .lightbox__counter { position: absolute; top: 1.3rem; left: 1.5rem; font: 11px/1 var(--mono); letter-spacing: .08em; color: var(--muted); }
+    .lightbox__nav { position: absolute; top: 50%; left: 0; right: 0; z-index: 2; display: flex; justify-content: space-between; transform: translateY(-50%); pointer-events: none; }
+    .lightbox__nav button { pointer-events: auto; width: 44px; height: 44px; background: rgba(233,255,47,.15); color: var(--white); border: 1px solid rgba(233,255,47,.4); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all .2s ease; }
+    .lightbox__nav button:hover { background: var(--lime); color: var(--ink); border-color: var(--lime); }
+    .lightbox__nav svg { width: 20px; height: 20px; }
+    .lightbox__img { touch-action: none; }
+    .lightbox__zoom { position: absolute; top: 1rem; right: 68px; z-index: 4; display: flex; align-items: center; gap: 2px; padding: 4px; background: rgba(8,8,8,.68); border: 1px solid rgba(255,255,255,.2); border-radius: 999px; backdrop-filter: blur(8px); }
+    .lightbox__zoom button { height: 32px; min-width: 32px; padding: 0 9px; background: transparent; color: var(--white); border: 0; border-radius: 999px; font: 600 14px/1 var(--mono); display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background .15s ease, color .15s ease; }
+    .lightbox__zoom button:hover { background: var(--lime); color: var(--ink); }
+    .lightbox__zoom [data-zoom="reset"] { min-width: 54px; font-size: 10px; letter-spacing: .06em; }
+    html[data-theme="light"] .lightbox__close { background: var(--ink); color: var(--white); }
+    html[data-theme="light"] .lightbox__zoom { background: rgba(246,245,238,.85); border-color: rgba(0,0,0,.2); }
+    html[data-theme="light"] .lightbox__zoom button { color: var(--ink); }
+    html[data-theme="light"] .lightbox__zoom button:hover { background: var(--ink); color: var(--white); }
+
+    @media (max-width: 900px) {
+      .gallery-hero { min-height: 55vh; padding: 3rem 5vw 4rem; }
+      .gallery-hero__title h1 { font-size: clamp(3rem, 14vw, 8rem); }
+      .gallery-info { padding: 3rem 5vw; }
+      .gallery-frames { padding: 0 5vw 4rem; }
+      .gallery-strip { padding: 3rem 5vw; }
+      .gallery-footer { grid-template-columns: 1fr; text-align: center; }
+      .gallery-footer__control { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="site-shell">
+    <header class="topbar" role="banner">
+      <a href="preview.html" class="topbar__brand brand-mark"><span>KAVITA</span><span class="brand-mark__face"><i></i><i></i><b></b></span><span>UCHILA</span></a>
+      <nav class="topnav" role="navigation" aria-label="Principal">
+        <a href="preview.html">INÍCIO<span>01</span></a>
+        <a href="preview.html#work">TRABALHOS<span>02</span></a>
+        <a href="gallery.html" class="is-active">GALERIA<span>03</span></a>
+        <a href="preview.html#about">SOBRE<span>04</span></a>
+        <a href="preview.html#contact">CONTACTO<span>05</span></a>
+      </nav>
+    </header>
+
+    <main class="gallery-page">
+      <nav class="gallery-nav" role="navigation" aria-label="Galeria">
+        <a href="preview.html" class="gallery-nav__brand brand-mark"><span>KAVITA</span><span class="brand-mark__face"><i></i><i></i><b></b></span><span>UCHILA</span></a>
+        <span class="gallery-nav__crumb">GALERIA PESSOAL</span>
+        <a href="preview.html#work" class="gallery-nav__back"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> TODOS OS TRABALHOS</a>
+      </nav>
+
+      <section class="gallery-hero" aria-label="Vídeo principal da galeria"></section>
+
+      <section class="gallery-info" aria-label="Informação da galeria"></section>
+
+      <section class="gallery-frames" aria-label="Quadros da galeria"></section>
+    </main>
+
+    <footer class="gallery-footer">
+      <div class="gallery-footer__center"><strong>KAVITA UCHILA</strong><br /><small>IMAGEM COM PULSO</small></div>
+    </footer>
+  </div>
+
+  <!-- Lightbox -->
+  <div id="galleryLightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Ver item em tamanho real">
+    <button class="lightbox__close" data-act="gallery-close" aria-label="Fechar">✕</button>
+    <div class="lightbox__counter" id="galleryLightboxCounter">1 / 1</div>
+    <div class="lightbox__content">
+      <img class="lightbox__img" src="" alt="" style="display:none">
+      <video class="lightbox__video" controls style="display:none"></video>
+      <iframe class="lightbox__iframe" style="display:none" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+      <div class="lightbox__text" style="display:none"></div>
+    </div>
+    <p class="lightbox__caption" id="galleryLightboxCaption"></p>
+    <div class="lightbox__nav">
+      <button data-act="gallery-prev" aria-label="Item anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <button data-act="gallery-next" aria-label="Próximo item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
+    </div>
+    <div class="lightbox__zoom" data-zoom-toolbar style="display:none">
+      <button data-zoom="out" aria-label="Reduzir zoom">−</button>
+      <button data-zoom="reset" data-zoom-percent aria-label="Repor zoom">100%</button>
+      <button data-zoom="in" aria-label="Aumentar zoom">+</button>
+    </div>
+  </div>
+
+  <script src="lightbox-zoom.js"></script>
+  <script>
+    var ADMIN_KEY = "kavita-admin-content";
+    var mediaCache = {};
+
+    async function loadSiteContent() {
+      try {
+        var res = await fetch('/api/site-content');
+        if (res.ok) {
+          var data = await res.json();
+          if (data && Array.isArray(data.projects) && data.homepage) return data;
+        }
+      } catch (e) {}
+      try {
+        var raw = localStorage.getItem(ADMIN_KEY);
+        if (raw) {
+          var parsed = JSON.parse(raw);
+          if (parsed && Array.isArray(parsed.projects) && parsed.homepage) return parsed;
+        }
+      } catch (e) {}
+      return null;
+    }
+
+    function openMediaDb() {
+      return new Promise(function (resolve) {
+        if (!("indexedDB" in window)) { resolve(null); return; }
+        var req = indexedDB.open("kavita-media", 1);
+        req.onupgradeneeded = function () {
+          if (!req.result.objectStoreNames.contains("files")) req.result.createObjectStore("files");
+        };
+        req.onsuccess = function () { resolve(req.result); };
+        req.onerror = function () { resolve(null); };
+      });
+    }
+
+    function readMediaBlob(key) {
+      return openMediaDb().then(function (db) {
+        if (!db) return null;
+        return new Promise(function (resolve) {
+          var tx = db.transaction("files", "readonly");
+          var req = tx.objectStore("files").get(key);
+          req.onsuccess = function () { db.close(); resolve(req.result || null); };
+          req.onerror = function () { db.close(); resolve(null); };
+        });
+      });
+    }
+
+    function resolveMedia(state) {
+      var pending = [];
+      function walk(node) {
+        if (!node || typeof node !== "object") return;
+        Object.keys(node).forEach(function (key) {
+          var value = node[key];
+          if (typeof value === "string" && value.indexOf("idb:") === 0) {
+            var mediaKey = value.slice(4);
+            if (mediaCache[mediaKey] !== undefined) { node[key] = mediaCache[mediaKey]; return; }
+            pending.push(readMediaBlob(mediaKey).then(function (blob) {
+              var url = blob ? URL.createObjectURL(blob) : "";
+              mediaCache[mediaKey] = url;
+              node[key] = url;
+            }));
+          } else if (value && typeof value === "object") {
+            walk(value);
+          }
+        });
+      }
+      walk(state);
+      return Promise.all(pending).then(function () { return state; });
+    }
+
+    var pad = function (n) { return String(n).padStart(2, "0"); };
+
+    function escapeHtml(text) {
+      return String(text == null ? "" : text).replace(/[&<>"']/g, function (c) {
+        return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+      });
+    }
+
+    function youtubeEmbedUrl(url) {
+      if (!url) return "";
+      var m = url.match(/(?:youtube\.com\/(?:watch\?v=|embed\/|v\/)|youtu\.be\/)([^&\n?#]+)/);
+      return m ? "https://www.youtube.com/embed/" + m[1] + "?rel=0&modestbranding=1" : "";
+    }
+
+    // Detecta PNGs com transparência e remove o fundo da moldura (object-fit: contain)
+    function markTransparentImages(root, mediaSelector) {
+      root.querySelectorAll("img").forEach(function (img) {
+        function check() {
+          try {
+            var w = img.naturalWidth, h = img.naturalHeight;
+            if (!w || !h) return;
+            var max = 64;
+            var scale = Math.min(1, max / Math.max(w, h));
+            var cw = Math.max(1, Math.round(w * scale));
+            var ch = Math.max(1, Math.round(h * scale));
+            var canvas = document.createElement("canvas");
+            canvas.width = cw;
+            canvas.height = ch;
+            var ctx = canvas.getContext("2d");
+            ctx.clearRect(0, 0, cw, ch);
+            ctx.drawImage(img, 0, 0, cw, ch);
+            var data = ctx.getImageData(0, 0, cw, ch).data;
+            var total = cw * ch;
+            var clear = 0;
+            for (var i = 3; i < data.length; i += 4) {
+              if (data[i] < 250) {
+                clear++;
+                if (clear / total > 0.02) break;
+              }
+            }
+            if (clear / total > 0.02) {
+              var media = img.closest(mediaSelector);
+              if (media) media.classList.add("is-transparent");
+              var hero = img.closest(".gallery-hero");
+              if (hero) hero.classList.add("is-transparent");
+            }
+          } catch (e) {}
+        }
+        if (img.complete && img.naturalWidth) check();
+        else img.addEventListener("load", check, { once: true });
+      });
+    }
+
+    function renderGallery(gallery) {
+      var items = gallery && gallery.gallery ? gallery.gallery : (gallery || []);
+      var coverVideo = gallery && gallery.coverVideo ? gallery.coverVideo : "";
+      var coverImage = gallery && gallery.coverImage ? gallery.coverImage : "";
+      var heroEl = document.querySelector(".gallery-hero");
+      var infoEl = document.querySelector(".gallery-info");
+      var framesEl = document.querySelector(".gallery-frames");
+      var footerEl = document.querySelector(".gallery-footer");
+
+      if (!items.length) {
+        heroEl.innerHTML = '<div class="gallery-hero__title"><span class="eyebrow">KAVITA UCHILA / GALERIA PESSOAL</span><h1>Galeria</h1></div>';
+        infoEl.innerHTML = '<div class="gallery-info__label"><span class="section-number">01</span><span class="eyebrow">GALERIA PESSOAL</span></div><p class="gallery-info__description">Sem itens na galeria. Adicione fotos e vídeos no painel admin.</p>';
+        framesEl.innerHTML = '';
+        footerEl.innerHTML = '<div class="gallery-footer__center"><strong>KAVITA UCHILA</strong><br /><small>IMAGEM COM PULSO</small></div>';
+        return;
+      }
+
+      var heroHtml = '';
+      if (coverVideo) {
+        heroHtml = '<video class="gallery-hero__cover-video" src="' + escapeHtml(coverVideo) + '" muted loop autoplay playsinline preload="auto"></video>';
+      } else if (coverImage) {
+        heroHtml = '<img class="gallery-hero__image" src="' + escapeHtml(coverImage) + '" alt="Capa da galeria" />';
+      } else {
+        var first = items[0];
+        if (first && first.src && (first.type === "video" || first.type === "youtube")) {
+          var videoSrc = first.type === "youtube" ? youtubeEmbedUrl(first.src) : first.src;
+          var isYt = first.type === "youtube";
+          heroHtml = isYt
+            ? '<iframe class="gallery-hero__cover-video" src="' + escapeHtml(videoSrc) + '" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>'
+            : '<video class="gallery-hero__cover-video" src="' + escapeHtml(videoSrc) + '" muted loop autoplay playsinline preload="auto"></video>';
+        } else {
+          heroHtml = '<video class="gallery-hero__video" src="https://cdn.pixabay.com/video/2025/11/24/317899_medium.mp4" muted loop autoplay playsinline preload="metadata"></video>';
+        }
+      }
+      heroEl.innerHTML = heroHtml +
+        '<div class="gallery-hero__wash"></div>' +
+        '<div class="gallery-hero__index"><span class="section-number">01</span><i></i><span>' + pad(items.length) + ' ITENS</span></div>' +
+        '<div class="gallery-hero__title">' +
+        '<span class="eyebrow">KAVITA UCHILA / GALERIA PESSOAL</span>' +
+        '<h1>Fotos e Vídeos</h1>' +
+        '<span class="gallery-hero__tag">ARQUIVO PESSOAL</span>' +
+        '</div>' +
+        '<a class="gallery-hero__sound" href="#">COMEÇAR UM SINAL <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg></a>';
+      markTransparentImages(heroEl, ".gallery-hero__image");
+
+      var infoHtml = '<div class="gallery-info__label"><span class="section-number">01</span><span class="eyebrow">GALERIA PESSOAL</span></div>' +
+        '<p class="gallery-info__description">' + items.length + " item" + (items.length === 1 ? "" : "s") + " na galeria pessoal. Clique em qualquer quadro para ver em tamanho real." + '</p>' +
+        '<dl class="gallery-info__details">' +
+        '<div><dt>TOTAL</dt><dd>' + items.length + '</dd></div>' +
+        '<div><dt>IMAGENS</dt><dd>' + items.filter(function (i) { return i.type === "image"; }).length + '</dd></div>' +
+        '<div><dt>VÍDEOS</dt><dd>' + items.filter(function (i) { return i.type === "video"; }).length + '</dd></div>' +
+        '<div><dt>YOUTUBE</dt><dd>' + items.filter(function (i) { return i.type === "youtube"; }).length + '</dd></div>' +
+        '<div><dt>TEXTOS</dt><dd>' + items.filter(function (i) { return i.type === "text"; }).length + '</dd></div>' +
+        '</dl>';
+
+      infoEl.innerHTML = infoHtml;
+
+      var galleryTemplate = gallery && gallery.template ? gallery.template : "cinematic";
+      framesEl.className = "gallery-frames gallery-frames--" + galleryTemplate;
+      var framesHtml = "";
+      items.forEach(function (it, idx) {
+        var layoutClass = "gallery-frame--" + (it.layout || "wide");
+        var mediaHtml = "";
+        var label = it.caption || (it.type === "video" ? "Vídeo" : it.type === "youtube" ? "YouTube" : it.type === "text" ? "Texto" : "Imagem") + " " + pad(idx + 1);
+
+        if (it.type === "text") {
+          mediaHtml = '<div class="gallery-frame__media gallery-frame__media--text">' + escapeHtml(it.body || "") + '</div>';
+        } else if (it.type === "youtube") {
+          mediaHtml = '<div class="gallery-frame__media gallery-frame__media--previewable"><iframe src="' + escapeHtml(youtubeEmbedUrl(it.src)) + '" title="' + escapeHtml(label) + '" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" data-lightbox-src="' + escapeHtml(youtubeEmbedUrl(it.src)) + '" data-lightbox-type="youtube" data-lightbox-caption="' + escapeHtml(it.caption || "") + '"></iframe><button class="gallery-frame__preview" aria-label="Ver em tamanho real"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg></button></div>';
+        } else if (it.type === "video") {
+          mediaHtml = '<div class="gallery-frame__media gallery-frame__media--previewable"><video src="' + escapeHtml(it.src) + '" muted loop autoplay playsinline preload="auto" data-lightbox-src="' + escapeHtml(it.src) + '" data-lightbox-type="video" data-lightbox-caption="' + escapeHtml(it.caption || "") + '"></video><button class="gallery-frame__preview" aria-label="Ver em tamanho real"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg></button></div>';
+        } else {
+          mediaHtml = '<div class="gallery-frame__media gallery-frame__media--previewable"><img src="' + escapeHtml(it.src) + '" alt="' + escapeHtml(label) + '" data-lightbox-src="' + escapeHtml(it.src) + '" data-lightbox-type="image" data-lightbox-caption="' + escapeHtml(it.caption || "") + '" /><button class="gallery-frame__preview" aria-label="Ver em tamanho real"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg></button></div>';
+        }
+
+        var copyHtml = "";
+        if (it.caption || (it.type === "text" && it.body)) {
+          copyHtml = '<div class="gallery-frame__copy">' +
+            (it.caption ? '<strong>' + escapeHtml(it.caption) + '</strong>' : '') +
+            (it.type === "text" && it.body ? '<p>' + escapeHtml(it.body) + '</p>' : '') +
+            '</div>';
+        }
+
+        framesHtml += '<article class="gallery-frame ' + layoutClass + '" data-idx="' + idx + '">' + mediaHtml + copyHtml +
+          '<div class="gallery-frame__meta">' +
+          '<span class="gallery-frame__item-index">' + pad(idx + 1) + '</span>' +
+          '<span class="gallery-frame__item-label">' + escapeHtml(it.label || it.title || "ITEM") + '</span>' +
+          '</div>' +
+          '</article>';
+      });
+      framesEl.innerHTML = framesHtml;
+      markTransparentImages(framesEl, ".gallery-frame__media");
+
+      framesEl.querySelectorAll("[data-lightbox-src]").forEach(function (el) {
+        el.addEventListener("click", function () {
+          var idx = Number(el.closest(".gallery-frame").getAttribute("data-idx"));
+          openLightbox(idx);
+        });
+      });
+    }
+
+    var lightbox = document.getElementById("galleryLightbox");
+    var lightboxImg = lightbox.querySelector(".lightbox__img");
+    var lightboxVideo = lightbox.querySelector(".lightbox__video");
+    var lightboxIframe = lightbox.querySelector(".lightbox__iframe");
+    var lightboxText = lightbox.querySelector(".lightbox__text");
+    var lightboxCaption = document.getElementById("galleryLightboxCaption");
+    var lightboxCounter = document.getElementById("galleryLightboxCounter");
+    var lightboxZoomBar = lightbox.querySelector("[data-zoom-toolbar]");
+    var lightboxZoom = createLightboxZoom(lightboxImg, lightbox, lightboxZoomBar);
+    var items = [];
+    var currentIndex = 0;
+
+    function openLightbox(idx) {
+      currentIndex = idx;
+      updateLightbox();
+      lightbox.classList.add("is-open");
+      document.documentElement.style.overflow = "hidden";
+    }
+
+    function updateLightbox() {
+      var it = items[currentIndex] || {};
+      var kind = it.type || it.mediaType || "image";
+      lightboxImg.style.display = "none";
+      lightboxVideo.style.display = "none";
+      lightboxIframe.style.display = "none";
+      lightboxText.style.display = "none";
+      lightboxVideo.pause();
+      lightboxVideo.src = "";
+      lightboxIframe.src = "about:blank";
+
+      if (kind === "video") {
+        lightboxVideo.src = it.src;
+        lightboxVideo.style.display = "block";
+        lightboxVideo.play().catch(function () {});
+      } else if (kind === "youtube") {
+        lightboxIframe.src = youtubeEmbedUrl(it.src);
+        lightboxIframe.style.display = "block";
+      } else if (kind === "text") {
+        lightboxText.textContent = it.body || "";
+        lightboxText.style.display = "block";
+      } else {
+        lightboxImg.src = it.src;
+        lightboxImg.alt = it.caption || "";
+        lightboxImg.style.display = "block";
+      }
+
+      var isImage = kind !== "video" && kind !== "youtube" && kind !== "text";
+      if (lightboxZoomBar) lightboxZoomBar.style.display = isImage ? "flex" : "none";
+      if (lightboxZoom) lightboxZoom.reset(false);
+      lightboxCaption.textContent = it.caption || (kind === "video" ? "Vídeo" : kind === "youtube" ? "YouTube" : kind === "text" ? "Texto" : "Imagem");
+      lightboxCounter.textContent = (currentIndex + 1) + " / " + items.length;
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove("is-open");
+      document.documentElement.style.overflow = "";
+      lightboxVideo.pause();
+      lightboxVideo.src = "";
+      lightboxIframe.src = "about:blank";
+      if (lightboxZoom) lightboxZoom.reset(false);
+    }
+
+    function prevItem() {
+      currentIndex = (currentIndex - 1 + items.length) % items.length;
+      updateLightbox();
+    }
+
+    function nextItem() {
+      currentIndex = (currentIndex + 1) % items.length;
+      updateLightbox();
+    }
+
+    lightbox.querySelector('[data-act="gallery-close"]').addEventListener("click", closeLightbox);
+    lightbox.querySelector('[data-act="gallery-prev"]').addEventListener("click", prevItem);
+    lightbox.querySelector('[data-act="gallery-next"]').addEventListener("click", nextItem);
+
+    lightbox.addEventListener("click", function (e) {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (!lightbox.classList.contains("is-open")) return;
+      if (e.key === "Escape") closeLightbox();
+      if (e.key === "ArrowLeft") prevItem();
+      if (e.key === "ArrowRight") nextItem();
+    });
+
+    loadSiteContent().then(function (data) {
+      if (data && Array.isArray(data.projects)) {
+        var galleryProject = data.projects.find(function (p) { return p.id === "galeria-pessoal"; });
+        items = galleryProject ? (galleryProject.frames || []).map(function (f) {
+          return Object.assign({}, f, { type: f.type || f.mediaType || "image" });
+        }) : [];
+        var coverVideo = galleryProject ? galleryProject.coverVideo || "" : "";
+        var coverImage = galleryProject ? galleryProject.coverImage || "" : "";
+        var galleryTemplate = galleryProject ? galleryProject.template || "cinematic" : "cinematic";
+        var galleryObj = { gallery: items, coverVideo: coverVideo, coverImage: coverImage, template: galleryTemplate };
+        resolveMedia(galleryObj).then(function () {
+          renderGallery(galleryObj);
+        });
+      } else {
+        items = [];
+        renderGallery({ gallery: [], coverVideo: "", coverImage: "" });
+      }
+    }).catch(function () {
+      items = [];
+      renderGallery({ gallery: [], coverVideo: "", coverImage: "" });
+    });
+  </script>
+</body>
+</html>

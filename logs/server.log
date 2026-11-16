@@ -1,0 +1,16 @@
+
+╔══════════════════════════════════════════════════════════════╗
+║  Kavita Uchila - Static Site Server                          ║
+║  Running on http://localhost:3000                            ║
+║                                                              ║
+║  API Endpoints:                                              ║
+║    GET  /api/site-content     - Public site content          ║
+║    GET  /api/admin/content    - Admin content                ║
+║    POST /api/admin/content    - Save admin content           ║
+║    POST /api/admin/upload     - Upload file                  ║
+║    POST /api/admin/login      - Admin login                  ║
+║    POST /api/admin/reset      - Reset to seed data           ║
+║                                                              ║
+║  Data file: E:\Claude Co - Work\kavita web\data\site-content.json                                    ║
+╚══════════════════════════════════════════════════════════════╝
+  

@@ -1,0 +1,1596 @@
+{
+  "projects": [
+    {
+      "id": "piano-40390",
+      "index": "01",
+      "label": "Identidade Visual",
+      "title": "Rebrading Chimuma",
+      "tag": "ESTÚDIO / RITMO",
+      "description": "Um estudo táctil de mãos, ritmo e da electricidade silenciosa de uma sala antes da primeira nota.",
+      "role": "DIRECÇÃO VISUAL / IMAGEM EM MOVIMENTO",
+      "location": "LUANDA / MUNDO",
+      "year": "2026",
+      "duration": 20,
+      "video": "/uploads/c130854d20626e399f6b9a924ae8cd4facf98f2dfb4f27f61b3610cb152a2f7a.mp4",
+      "coverImage": "",
+      "coverVideo": "/uploads/ead08fb09cccf2a46e27817a1c10c67901bb68dcbd61162d7055d7d0b9a3cb19.mp4",
+      "template": "editorial",
+      "frames": [
+        {
+          "id": "frame-1793752568894",
+          "mediaType": "image",
+          "src": "/uploads/4a790d95e24357e0f4723fb1c22fb34bc8a0a5cab0977a31e4eecb2620b97b71.png",
+          "caption": "",
+          "body": "",
+          "layout": "square",
+          "sortOrder": 0
+        },
+        {
+          "id": "frame-1793790808670",
+          "mediaType": "image",
+          "src": "/uploads/243a53a820268ce3682055aa94eac1b3641a99129a5885451106a77016c8334d.png",
+          "caption": "",
+          "body": "",
+          "layout": "square",
+          "sortOrder": 1
+        },
+        {
+          "id": "frame-1793790845686",
+          "mediaType": "image",
+          "src": "/uploads/b90e6f18ba787a1f53b50927bea0a8e864e21a54206f5492f0e482eb2438c9e4.png",
+          "caption": "",
+          "body": "",
+          "layout": "square",
+          "sortOrder": 2
+        },
+        {
+          "id": "frame-1793790901526",
+          "mediaType": "image",
+          "src": "/uploads/2a1755744e3ff92363682c5fba86d1e9079048c707a39ecb7b1f46bc817e080b.png",
+          "caption": "",
+          "body": "",
+          "layout": "square",
+          "sortOrder": 3
+        },
+        {
+          "id": "frame-1793791139159",
+          "mediaType": "image",
+          "src": "/uploads/e08a602e8152460085d903378b6764185e13e0de57cccb4dd9a997dd5223aef7.png",
+          "caption": "",
+          "body": "",
+          "layout": "square",
+          "sortOrder": 4
+        },
+        {
+          "id": "frame-1793791450839",
+          "mediaType": "image",
+          "src": "/uploads/a0e382c44e123dbb6ee27c0179933ab6cf71d3e82612d9b5dd3c746f7e570809.png",
+          "caption": "",
+          "body": "",
+          "layout": "square",
+          "sortOrder": 5
+        },
+        {
+          "id": "frame-1793791536775",
+          "mediaType": "image",
+          "src": "/uploads/18ee8ae1429e0576fd8fc7e47f14abe5886fe39978bd34b023ac89c3f31c8056.png",
+          "caption": "",
+          "body": "",
+          "layout": "portrait",
+          "sortOrder": 6
+        },
+        {
+          "id": "frame-1793791537231",
+          "mediaType": "image",
+          "src": "/uploads/c454a6c26a3d2eb76e7709e6d496f61c7ac5bbc0d033c5a69da6f1a552ac48a6.png",
+          "caption": "",
+          "body": "",
+          "layout": "portrait",
+          "sortOrder": 7
+        },
+        {
+          "id": "frame-1793791537775",
+          "mediaType": "image",
+          "src": "/uploads/36434da6af7070c834dd87ca3b0e7c46d6f7bac1a69178704e79e1673b537326.png",
+          "caption": "",
+          "body": "",
+          "layout": "portrait",
+          "sortOrder": 8
+        },
+        {
+          "id": "frame-1793791669591",
+          "mediaType": "image",
+          "src": "/uploads/2a2e37080a90d0141b36f727009b2aa9717e9b7184d40aa4532a52e64acdc9ed.png",
+          "caption": "",
+          "body": "",
+          "layout": "square",
+          "sortOrder": 9
+        },
+        {
+          "id": "frame-1793791670087",
+          "mediaType": "image",
+          "src": "/uploads/0e54c8a39fe1534bf8da6af295d9b89945732f3d1f50d8534968b5cc60f95438.png",
+          "caption": "",
+          "body": "",
+          "layout": "square",
+          "sortOrder": 10
+        },
+        {
+          "id": "frame-1793791670591",
+          "mediaType": "image",
+          "src": "/uploads/ddcdb7168821f28d06f6a2cc9cfbb4860a2a6a1e86e702fb799b7d90954adcc7.png",
+          "caption": "",
+          "body": "",
+          "layout": "square",
+          "sortOrder": 11
+        }
+      ],
+      "pageURL": "",
+      "featured": false,
+      "published": true,
+      "sortOrder": 0,
+      "theme": "dark"
+    },
+    {
+      "id": "dance-75547",
+      "index": "03",
+      "label": "Identidade Visual",
+      "title": "Fab PRO",
+      "tag": "PERFORMANCE / ENERGIA",
+      "description": "Corpos em movimento, cortados pelo beat. Um fragmento sobre energia, libertação e a forma de um gesto.",
+      "role": "PERFORMANCE / EDITORIAL",
+      "location": "LUANDA / MUNDO",
+      "year": "2026",
+      "duration": 17,
+      "video": "/uploads/acee6c581f63eaba88305792277f02b63aed6aaadff69fb6c89d0ef9607f615c.mp4",
+      "coverImage": "",
+      "coverVideo": "/uploads/acee6c581f63eaba88305792277f02b63aed6aaadff69fb6c89d0ef9607f615c.mp4",
+      "template": "split",
+      "frames": [
+        {
+          "id": "frame-1793795698515",
+          "mediaType": "image",
+          "src": "/uploads/cfd243b133bc51b0db6adcda846370dfab81e04c9187bd330a9943bcfcd78857.png",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 0
+        },
+        {
+          "id": "frame-1793795699017",
+          "mediaType": "image",
+          "src": "/uploads/a02033de1c8d72724323123cbe9b72723a66b076b57024429315a2908b316ccf.png",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 1
+        },
+        {
+          "id": "frame-1793795699465",
+          "mediaType": "image",
+          "src": "/uploads/d1683bb281406a66d096ed4ce171c3191e754e7818795ee00b713f2c4a6d42c8.png",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 2
+        },
+        {
+          "id": "frame-1793795859417",
+          "mediaType": "image",
+          "src": "/uploads/09688ae9331e48f9771d4b2b2ca908dd9134351f9fab254fe2099459c9e4ead8.png",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 3
+        },
+        {
+          "id": "frame-1793796952753",
+          "mediaType": "image",
+          "src": "/uploads/38e7cb374ff59acbee0c270ae574d8ccc9e94b6722e4deff3865891c35eb775e.png",
+          "caption": "",
+          "body": "",
+          "layout": "square",
+          "sortOrder": 4
+        },
+        {
+          "id": "frame-1793796953217",
+          "mediaType": "image",
+          "src": "/uploads/80275317bcbf59b12bffb92ed600d1f781cc920436fa3adc0da0797d125077a1.png",
+          "caption": "",
+          "body": "",
+          "layout": "square",
+          "sortOrder": 5
+        },
+        {
+          "id": "frame-1793797215657",
+          "mediaType": "image",
+          "src": "/uploads/dc75eef03fb9d0b74bc4062aa4012cb1d491aba397f5cac455344b47be95fb0e.png",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 6
+        }
+      ],
+      "pageURL": "",
+      "featured": false,
+      "published": true,
+      "sortOrder": 2,
+      "theme": "dark"
+    },
+    {
+      "id": "project-1793780085554",
+      "index": "04",
+      "label": "Identidade Visual",
+      "title": "EXPO Recicla",
+      "tag": "IMAGEM / MOVIMENTO",
+      "description": "Um novo fragmento em movimento.ff",
+      "role": "DIRECÇÃO VISUAL",
+      "location": "LUANDA / MUNDO",
+      "year": "2025",
+      "duration": 10,
+      "video": "/uploads/c130854d20626e399f6b9a924ae8cd4facf98f2dfb4f27f61b3610cb152a2f7a.mp4",
+      "coverImage": "",
+      "coverVideo": "",
+      "template": "split",
+      "frames": [
+        {
+          "id": "frame-1793799417722",
+          "mediaType": "image",
+          "src": "/uploads/4cae851b04e2e8e537042ab5235f30187941f1d7c54adc20bb1ad53e926cad80.png",
+          "caption": "",
+          "body": "",
+          "layout": "square",
+          "sortOrder": 0
+        },
+        {
+          "id": "frame-1793799418210",
+          "mediaType": "image",
+          "src": "/uploads/ef6582f6c5f4aceebc335042e19fb7137fc9474cc6331809385e790d2ee3b2a7.png",
+          "caption": "",
+          "body": "",
+          "layout": "square",
+          "sortOrder": 1
+        },
+        {
+          "id": "frame-1793799418642",
+          "mediaType": "image",
+          "src": "/uploads/fedb2a20c3d40186b33b8000ae9e9b4d4576ab6f3e007caf7be4d6a7badf7b81.png",
+          "caption": "",
+          "body": "",
+          "layout": "square",
+          "sortOrder": 2
+        },
+        {
+          "id": "frame-1793799590835",
+          "mediaType": "image",
+          "src": "/uploads/312a15cce1f2baa6e7dffe1a9065b1000a87e6f7d8ff749cfe908c4aa99b7cab.png",
+          "caption": "",
+          "body": "",
+          "layout": "portrait",
+          "sortOrder": 3
+        },
+        {
+          "id": "frame-1793799591402",
+          "mediaType": "image",
+          "src": "/uploads/5da62345e57dc4d96f7924282d7007bfbecd664ed5236125f7bd838314b1d5aa.png",
+          "caption": "",
+          "body": "",
+          "layout": "portrait",
+          "sortOrder": 4
+        },
+        {
+          "id": "frame-1793799592075",
+          "mediaType": "image",
+          "src": "/uploads/457af6706401ebb2a621da4e660bd9a75f83b85eadfff08ff2515e169944faa2.png",
+          "caption": "",
+          "body": "",
+          "layout": "portrait",
+          "sortOrder": 5
+        },
+        {
+          "id": "frame-1793799718027",
+          "mediaType": "image",
+          "src": "/uploads/bdb0e986b740ddef564ced982c2b1b6df19ae34a3f1ac665b633b9e78b17059f.png",
+          "caption": "",
+          "body": "",
+          "layout": "square",
+          "sortOrder": 6
+        },
+        {
+          "id": "frame-1793799718531",
+          "mediaType": "image",
+          "src": "/uploads/8048e66ca70fc6f030a793a9661ad29dca7f0de58b55f99eb896cbcc223df707.png",
+          "caption": "",
+          "body": "",
+          "layout": "square",
+          "sortOrder": 7
+        },
+        {
+          "id": "frame-1793799718939",
+          "mediaType": "image",
+          "src": "/uploads/c35e80bea6550b082aa2b3b9e35340657d6f6f079e01d5697e2e467977f3655d.png",
+          "caption": "",
+          "body": "",
+          "layout": "square",
+          "sortOrder": 8
+        },
+        {
+          "id": "frame-1793799817355",
+          "mediaType": "image",
+          "src": "/uploads/ea536d6bd65ca565a6bb3fc6169bd145fc8c0342795c4f93ec21c3cc1722ef0c.png",
+          "caption": "",
+          "body": "",
+          "layout": "split",
+          "sortOrder": 9
+        }
+      ],
+      "pageURL": "",
+      "featured": false,
+      "published": true,
+      "sortOrder": 99,
+      "theme": "dark"
+    },
+    {
+      "id": "project-1793798570818",
+      "index": "05",
+      "label": "Identidade Visual",
+      "title": "WORKSHOP HGA",
+      "tag": "IMAGEM / MOVIMENTO",
+      "description": "Um novo fragmento em movimento.",
+      "role": "DIRECÇÃO VISUAL",
+      "location": "LUANDA / MUNDO",
+      "year": "2026",
+      "duration": 10,
+      "video": "",
+      "coverImage": "/uploads/9d8197359b1c9b2305605efc979b0903f152815b317bae5d3557135b5bcdb090.png",
+      "coverVideo": "",
+      "template": "editorial",
+      "frames": [
+        {
+          "id": "frame-1793802636436",
+          "mediaType": "image",
+          "src": "/uploads/a343d9b53be50f0ada4bf52d826fa5bc55c10efc6638b52f5b4a5d03beb44b20.png",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 0
+        },
+        {
+          "id": "frame-1793802657852",
+          "mediaType": "image",
+          "src": "/uploads/63d7a7e169cfb19ef81b801d2f1b21c415b3e7a851bd67bc325e6eb12d15af10.png",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 1
+        },
+        {
+          "id": "frame-1793802669588",
+          "mediaType": "image",
+          "src": "/uploads/9d8197359b1c9b2305605efc979b0903f152815b317bae5d3557135b5bcdb090.png",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 2
+        },
+        {
+          "id": "frame-1793802692372",
+          "mediaType": "image",
+          "src": "/uploads/a0bab6a545ad046ce76db813abd6787165231aa7d7a39eb56e1fd1a13b5bf681.png",
+          "caption": "",
+          "body": "",
+          "layout": "square",
+          "sortOrder": 3
+        },
+        {
+          "id": "frame-1793802692901",
+          "mediaType": "image",
+          "src": "/uploads/e7038437033dada446e60163e8dc895b60fbe68d62bf306cd3dbe4c29b6b8e0f.png",
+          "caption": "",
+          "body": "",
+          "layout": "square",
+          "sortOrder": 4
+        },
+        {
+          "id": "frame-1793802693429",
+          "mediaType": "image",
+          "src": "/uploads/ef9814b1d6e97ea77e822786fed9ffd6a04e5c5a6e3fefb00fdfedaa5d20d1c4.png",
+          "caption": "",
+          "body": "",
+          "layout": "square",
+          "sortOrder": 5
+        },
+        {
+          "id": "frame-1793803013964",
+          "mediaType": "image",
+          "src": "/uploads/48b1215a38a6de4f318765ba2d5e99f9d1ca2c4c411e7dbc9992908314517b54.png",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 6
+        },
+        {
+          "id": "frame-1793803014508",
+          "mediaType": "image",
+          "src": "/uploads/30a136aab2ac37629abe7e51b4ba7ca420c57d7da67f4b08c2656adc7d8c281c.png",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 7
+        },
+        {
+          "id": "frame-1793803015204",
+          "mediaType": "image",
+          "src": "/uploads/1988d23827bae2a7d23b19aa51705b471e545e9021edc4ba2c2ad4b2c28ef035.png",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 8
+        }
+      ],
+      "pageURL": "",
+      "featured": false,
+      "published": true,
+      "sortOrder": 99,
+      "theme": "dark"
+    },
+    {
+      "id": "project-1793806016888",
+      "index": "05",
+      "label": "Identidade Visual",
+      "title": "Koolba ",
+      "tag": "IMAGEM / MOVIMENTO",
+      "description": "Um novo fragmento em movimento.",
+      "role": "DIRECÇÃO VISUAL",
+      "location": "LUANDA / MUNDO",
+      "year": "2026",
+      "duration": 10,
+      "video": "",
+      "coverImage": "/uploads/52cb0250907799fc71c0c4275ea0aa1852385de41453d7cd1d0b1492aa7f1ec2.png",
+      "coverVideo": "",
+      "template": "cinematic",
+      "frames": [
+        {
+          "id": "frame-1793808682639",
+          "mediaType": "image",
+          "src": "/uploads/78019dadb6c9d08584d20e202368f43c4bc5e110d449cfea4e261933e7fd3803.png",
+          "caption": "",
+          "body": "",
+          "layout": "fullscreen",
+          "sortOrder": 0
+        },
+        {
+          "id": "frame-1793808823023",
+          "mediaType": "image",
+          "src": "/uploads/9da3ddf4bf52ff8e66204b7804f6a8aa0b983feb61b971e6196c3d4259a4f28f.png",
+          "caption": "",
+          "body": "",
+          "layout": "fullscreen",
+          "sortOrder": 1
+        },
+        {
+          "id": "frame-1793808823487",
+          "mediaType": "image",
+          "src": "/uploads/7734f4ce75ca29d2d2775c0a5c9fff70d3b10ddebfbdde88c22322b3f2693f5c.png",
+          "caption": "",
+          "body": "",
+          "layout": "fullscreen",
+          "sortOrder": 2
+        },
+        {
+          "id": "frame-1793809900895",
+          "mediaType": "image",
+          "src": "/uploads/8a0dcd5e97ea0bdde7b7c24ef4f89709d09e7e9103b4de2a89d3d4ccea5975e4.png",
+          "caption": "",
+          "body": "",
+          "layout": "fullscreen",
+          "sortOrder": 3
+        },
+        {
+          "id": "frame-1793809901360",
+          "mediaType": "image",
+          "src": "/uploads/eac5a3bce9e0182cc633a29cebbfadc430c6bd6e96f73903b3870b17b02fe0d9.png",
+          "caption": "",
+          "body": "",
+          "layout": "fullscreen",
+          "sortOrder": 4
+        },
+        {
+          "id": "frame-1793810591528",
+          "mediaType": "image",
+          "src": "/uploads/9771d3ca41fd508bb7e6d7f3b9589652e76831201bed580ce7d4b257c408126d.png",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 5
+        },
+        {
+          "id": "frame-1793810592480",
+          "mediaType": "image",
+          "src": "/uploads/561c79999d5c707f2efee787b6ac1df186a27ed05b3b7f703f794ae8917d252b.png",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 6
+        },
+        {
+          "id": "frame-1793810655792",
+          "mediaType": "image",
+          "src": "/uploads/bc878a544189c3a4b1bcdadf71cf37ecd72c627cf57313a699d51ec8a8a2e698.png",
+          "caption": "",
+          "body": "",
+          "layout": "fullscreen",
+          "sortOrder": 7
+        },
+        {
+          "id": "frame-1793810656744",
+          "mediaType": "image",
+          "src": "/uploads/59156acd902efaace2fa1c90dcd1810f7831f2f01491697411e79adacdc39836.png",
+          "caption": "",
+          "body": "",
+          "layout": "fullscreen",
+          "sortOrder": 8
+        },
+        {
+          "id": "frame-1793810657768",
+          "mediaType": "image",
+          "src": "/uploads/f154b4cf1d3636baa36378b0e344f3471de51e798c0ae2fb3ab6fef47cba9cc5.png",
+          "caption": "",
+          "body": "",
+          "layout": "fullscreen",
+          "sortOrder": 9
+        }
+      ],
+      "pageURL": "",
+      "featured": false,
+      "published": true,
+      "sortOrder": 99,
+      "theme": "light"
+    },
+    {
+      "id": "project-1793810966217",
+      "index": "06",
+      "label": "Identidade Visual",
+      "title": "FTE Talks",
+      "tag": "IMAGEM / MOVIMENTO",
+      "description": "Um novo fragmento em movimento.",
+      "role": "DIRECÇÃO VISUAL",
+      "location": "LUANDA / MUNDO",
+      "year": "2026",
+      "duration": 10,
+      "video": "",
+      "coverImage": "/uploads/d0d7e3c0cf3b56814b64aa23378bee413bf47d02d28e161b3a06d43c0ada84cd.png",
+      "coverVideo": "",
+      "template": "cinematic",
+      "frames": [
+        {
+          "id": "frame-1793811046904",
+          "mediaType": "image",
+          "src": "/uploads/b1a14e8f4c4bd95d18f5a73cf4d49d9b93700a05b01b90e18a115980e0661897.png",
+          "caption": "",
+          "body": "",
+          "layout": "fullscreen",
+          "sortOrder": 0
+        },
+        {
+          "id": "frame-1793812425897",
+          "mediaType": "image",
+          "src": "/uploads/a03511b907e4fefa56aa7a066605511df99bbe750128224a8e310b413fb28703.png",
+          "caption": "",
+          "body": "",
+          "layout": "fullscreen",
+          "sortOrder": 1
+        },
+        {
+          "id": "frame-1793812426377",
+          "mediaType": "image",
+          "src": "/uploads/46fdd79a79f55584fa402c2260af8f2ba4f6c95c1c68edcfe5a7ad43e225991b.png",
+          "caption": "",
+          "body": "",
+          "layout": "fullscreen",
+          "sortOrder": 2
+        },
+        {
+          "id": "frame-1793812704977",
+          "mediaType": "image",
+          "src": "/uploads/9adf65bccdd8fb93dd56578ac0e1af20933f70bc63298ab385833337a44a33c1.png",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 3
+        },
+        {
+          "id": "frame-1793812705546",
+          "mediaType": "image",
+          "src": "/uploads/5a021fe39ee77ae9757915e442bc97208a88810eb4282041c8ca4a09e0eea274.png",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 4
+        },
+        {
+          "id": "frame-1793812706209",
+          "mediaType": "image",
+          "src": "/uploads/e40b90a99796d4d22d40bb882509312022a80be62a88a2f72007f9c3ad096279.png",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 5
+        }
+      ],
+      "pageURL": "",
+      "featured": false,
+      "published": true,
+      "sortOrder": 99,
+      "theme": "dark"
+    },
+    {
+      "id": "project-1793862679987",
+      "index": "07",
+      "label": "EDIÇAO DE VIDEO  / Motion graphics",
+      "title": "EDIÇAO DE VIDEO ",
+      "tag": "IMAGEM / MOVIMENTO",
+      "description": "Um novo fragmento em movimento.",
+      "role": "DIRECÇÃO VISUAL",
+      "location": "LUANDA / MUNDO",
+      "year": "2026",
+      "duration": 10,
+      "video": "",
+      "coverImage": "",
+      "coverVideo": "",
+      "template": "cinematic",
+      "frames": [
+        {
+          "id": "frame-1793862688874",
+          "mediaType": "youtube",
+          "src": "https://www.youtube.com/watch?v=GL9J23fX3J0",
+          "caption": "FÓRUM DE TECNOLOGIA E EDUCAÇÃO",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 0
+        },
+        {
+          "id": "frame-1793863299922",
+          "mediaType": "youtube",
+          "src": "https://www.youtube.com/watch?v=nrZIB-NtWOQ",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 1
+        },
+        {
+          "id": "frame-1793863708107",
+          "mediaType": "youtube",
+          "src": "https://www.youtube.com/watch?v=SEfT77pJG0g&t=24s",
+          "caption": "Kalemba RADICAL",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 2
+        }
+      ],
+      "pageURL": "",
+      "featured": false,
+      "published": true,
+      "sortOrder": 99,
+      "theme": "dark"
+    },
+    {
+      "id": "project-1793864614977",
+      "index": "08",
+      "label": "MODELAGEM 3D",
+      "title": "3D ART",
+      "tag": "IMAGEM / MOVIMENTO",
+      "description": "Um novo fragmento em movimento.",
+      "role": "DIRECÇÃO VISUAL",
+      "location": "LUANDA / MUNDO",
+      "year": "2026",
+      "duration": 10,
+      "video": "",
+      "coverImage": "/uploads/415008c45400164d91d8bad5ba702359bb91548bb62caee3de16ebcaec3d59b4.jpg",
+      "coverVideo": "",
+      "template": "gallery",
+      "frames": [
+        {
+          "id": "frame-1793864954256",
+          "mediaType": "image",
+          "src": "/uploads/bb986be2c39260c8a7a10b653cdf8545c5b34a223f512c02a0f85be8fd3d7ace.jpg",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 0
+        },
+        {
+          "id": "frame-1793865761746",
+          "mediaType": "image",
+          "src": "/uploads/4e06504bcf6334f66b13bf72c3a054767f3cf3e2f52a6e8a642ce4efb2f0272b.jpg",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 1
+        },
+        {
+          "id": "frame-1793865762960",
+          "mediaType": "image",
+          "src": "/uploads/ba5f8e21008c6b15e49062feeed6658dfda2ac63d48ff5d6e4c11aca045f92ad.jpg",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 2
+        },
+        {
+          "id": "frame-1793874103546",
+          "mediaType": "image",
+          "src": "/uploads/dc990e7e2a6054395b295544801ffb907b619d22a3834730448d9801b5e5f926.jpg",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 3
+        },
+        {
+          "id": "frame-1793874490434",
+          "mediaType": "image",
+          "src": "/uploads/21f9d6eca92e5f220e8932a192e8d76dd18ab2c38549fb45d216954097a36f24.jpg",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 4
+        },
+        {
+          "id": "frame-1793867767102",
+          "mediaType": "image",
+          "src": "/uploads/7970cdce096481b34fed93e03f45c2a751df686d5d06e0bfc876c6d6d6e340a8.png",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 5
+        },
+        {
+          "id": "frame-1793868027334",
+          "mediaType": "image",
+          "src": "/uploads/5c0d0edc06ddee1a064ad4726a634ad07cac4655203a1e39e8f2e7a787c36918.jpeg",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 6
+        },
+        {
+          "id": "frame-1793874749844",
+          "mediaType": "image",
+          "src": "/uploads/617648c550ba68b37b59e3996c90a87ca2f95b17559ede25b466659fa8accd89.jpg",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 7
+        },
+        {
+          "id": "frame-1793867581409",
+          "mediaType": "image",
+          "src": "/uploads/130af7697f77144399e37e047c13280f2894f713773f6d187fa933862d8dc5af.jpeg",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 8
+        },
+        {
+          "id": "frame-1793867582086",
+          "mediaType": "image",
+          "src": "/uploads/c5556126e7ef17e2a254c7c29765a401f0a2aa23a0a4a82ea689f655c993ba58.jpeg",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 9
+        },
+        {
+          "id": "frame-1793867582558",
+          "mediaType": "image",
+          "src": "/uploads/d1ab9aaaf5c0b18a2568d9f86261c960fafce646b0d39edd2f99afcad548314d.png",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 10
+        },
+        {
+          "id": "frame-1793868026830",
+          "mediaType": "image",
+          "src": "/uploads/301a6a8e3e98c206e2338871055a6fe241cdd093d58f4c386f2c4a47fd033b67.png",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 11
+        },
+        {
+          "id": "frame-1793873817378",
+          "mediaType": "image",
+          "src": "/uploads/4c0daa61cec2e86992fb367a7825281f5644e10b4d51a394ff75ce5554a694ed.jpg",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 12
+        },
+        {
+          "id": "frame-1793867766654",
+          "mediaType": "image",
+          "src": "/uploads/415008c45400164d91d8bad5ba702359bb91548bb62caee3de16ebcaec3d59b4.jpg",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 13
+        },
+        {
+          "id": "frame-1793867767478",
+          "mediaType": "image",
+          "src": "/uploads/d07bf6caa1036d8f2655a6111ac2119a14de58b07cab2278d87fac93c16d366e.jpeg",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 14
+        },
+        {
+          "id": "frame-1793870658829",
+          "mediaType": "image",
+          "src": "/uploads/1ec8718b5ec6c87ecaa40f932792e45dad8e65dfb8d5f976ea5c671c2305c932.jpg",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 15
+        },
+        {
+          "id": "frame-1793872089550",
+          "mediaType": "image",
+          "src": "/uploads/c5539bdf8ffc96b2863ab5a3cc63c0242faa06883295fa2c8e73441e56ba736e.jpg",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 16
+        },
+        {
+          "id": "frame-1793872090828",
+          "mediaType": "image",
+          "src": "/uploads/4f64dd43d4b100c24ca444b692f647728f763f645366525e1f8c2d5582de396c.jpg",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 17
+        },
+        {
+          "id": "frame-1793873818251",
+          "mediaType": "image",
+          "src": "/uploads/e7f1f3489faa5230b1c8dd542950ca190f42e6191d11ee49a2f9d1119764457b.jpg",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 18
+        },
+        {
+          "id": "frame-1793873818418",
+          "mediaType": "image",
+          "src": "/uploads/a99c9239a820433861b2e5854aad1b6710ffa08d16101e2ffcfb098009e77a10.jpg",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 19
+        },
+        {
+          "id": "frame-1793873818571",
+          "mediaType": "image",
+          "src": "/uploads/58e2bdd42b1409a896099052bad96e38c2b9eb0d2f319c275b1e3a67db8f6232.jpg",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 20
+        },
+        {
+          "id": "frame-1793873819042",
+          "mediaType": "image",
+          "src": "/uploads/9d81065a04fa3009f69ebd0ea63f93281eb6001f890f50a7e5b87840fa15d220.jpg",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 21
+        },
+        {
+          "id": "frame-1793873820194",
+          "mediaType": "image",
+          "src": "/uploads/3c8e24ed497da251c459b63902177077c1eae9bf9725deeddb2b9102cef80cbc.jpg",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 22
+        },
+        {
+          "id": "frame-1793874085458",
+          "mediaType": "image",
+          "src": "/uploads/9426f384a2c0556a91e0158a893d51d6fbe8d70a4af90d2beb200069b7e45073.png",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 23
+        },
+        {
+          "id": "frame-1793915834119",
+          "mediaType": "image",
+          "src": "/uploads/85e8d1f65a1b9038c22e97df79588aa476aae6c9b416afab3223cd8b8caa68d0.png",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 24
+        },
+        {
+          "id": "frame-1793915834543",
+          "mediaType": "image",
+          "src": "/uploads/71110ded5b09a77e9917a484727b03e7342bcb65dfab561fc23df09a455f0f6f.png",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 25
+        },
+        {
+          "id": "frame-1793915834918",
+          "mediaType": "image",
+          "src": "/uploads/6517b7d1de21be3aebba86a74dbb84ac9f350be010f90591ce0e7fe4d7e09889.png",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 26
+        },
+        {
+          "id": "frame-1793915835294",
+          "mediaType": "image",
+          "src": "/uploads/f4d04439ab782b6746ed167c23f8b4d8af4caa7193ce8618092c1b61f8aebd80.png",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 27
+        }
+      ],
+      "pageURL": "",
+      "featured": false,
+      "published": true,
+      "sortOrder": 99,
+      "theme": "light"
+    },
+    {
+      "id": "galeria-pessoal",
+      "index": "07",
+      "label": "GALERIA PESSOAL",
+      "title": "Galeria Pessoal",
+      "tag": "FOTOS E VÍDEOS",
+      "description": "Galeria pessoal de fotos e vídeos. Clique em qualquer quadro para ver em tamanho real.",
+      "role": "GALERIA PESSOAL",
+      "location": "LUANDA / MUNDO",
+      "year": "2026",
+      "duration": 0,
+      "video": "",
+      "coverImage": "",
+      "coverVideo": "/uploads/c8df4cb6ec5a51ca4ec40e7acb991a85f87d4f8e53b17638adc5fe32e10aa33f.mp4",
+      "template": "gallery",
+      "frames": [
+        {
+          "id": "frame-1793913461788",
+          "mediaType": "image",
+          "src": "/uploads/1528d5d21143764ad37ab05bcc5bccf4cae984607513967a482bfa9d34243d3a.jpg",
+          "caption": "",
+          "body": "",
+          "layout": "square",
+          "sortOrder": 0
+        },
+        {
+          "id": "frame-1793913464428",
+          "mediaType": "image",
+          "src": "/uploads/c1f02d9f0c95605dfd4658f35f23f003a9cc2ce7df345f295c98fbc4ad17c4f8.jpg",
+          "caption": "",
+          "body": "",
+          "layout": "square",
+          "sortOrder": 1
+        },
+        {
+          "id": "frame-1793913495004",
+          "mediaType": "image",
+          "src": "/uploads/e1804b8b4799f85896a6407fc20b67f44cf4e060069a159b055731f3cc634512.jpg",
+          "caption": "",
+          "body": "",
+          "layout": "square",
+          "sortOrder": 2
+        },
+        {
+          "id": "frame-1793913495756",
+          "mediaType": "image",
+          "src": "/uploads/a37d52542570bb17f32f2e207114cde8b4debc9f65f7ad4de66655871e8d69b1.png",
+          "caption": "",
+          "body": "",
+          "layout": "square",
+          "sortOrder": 3
+        },
+        {
+          "id": "frame-1793914523317",
+          "mediaType": "image",
+          "src": "/uploads/9ede594fbb7bb4cb54f0a08b7b34fd858f5a666b93c9da8e9668b019f73bac7c.webp",
+          "caption": "",
+          "body": "",
+          "layout": "square",
+          "sortOrder": 4
+        },
+        {
+          "id": "frame-1793914523613",
+          "mediaType": "image",
+          "src": "/uploads/01d3463516939bb2463c465c7864ea2133d2398c3b1f43bf21ae340bf8a22273.jpg",
+          "caption": "",
+          "body": "",
+          "layout": "square",
+          "sortOrder": 5
+        },
+        {
+          "id": "frame-1793914523949",
+          "mediaType": "image",
+          "src": "/uploads/3e7b484862c56e69b634f0d527ed4ab7a00140cd70b48a9de8fc8213605e40c0.jpg",
+          "caption": "",
+          "body": "",
+          "layout": "square",
+          "sortOrder": 6
+        },
+        {
+          "id": "frame-1793914528005",
+          "mediaType": "image",
+          "src": "/uploads/77b5bf032f46e656ec3d1f7f7d4427b8263bad30dadb6a2d89c962ed6543a323.jpg",
+          "caption": "",
+          "body": "",
+          "layout": "square",
+          "sortOrder": 7
+        },
+        {
+          "id": "frame-1793914528213",
+          "mediaType": "image",
+          "src": "/uploads/111446c53c8ad106610b890d082cb98c2a12e49284af77ed910eead5f7daf38c.jpg",
+          "caption": "",
+          "body": "",
+          "layout": "square",
+          "sortOrder": 8
+        },
+        {
+          "id": "frame-1793914528573",
+          "mediaType": "image",
+          "src": "/uploads/acfe2c257aa834ef4d3a2c8246218550c3129d6d6f77564fd013b7f15018255f.jpg",
+          "caption": "",
+          "body": "",
+          "layout": "square",
+          "sortOrder": 9
+        },
+        {
+          "id": "frame-1793914528742",
+          "mediaType": "image",
+          "src": "/uploads/c01039f4bcdea4cfac4da0cf704d4a8de5d1f904342553b5f3f4a6d7ab25506d.jpg",
+          "caption": "",
+          "body": "",
+          "layout": "square",
+          "sortOrder": 10
+        },
+        {
+          "id": "frame-1793914529253",
+          "mediaType": "image",
+          "src": "/uploads/1bec6e86baaf1cbbbcaae5b64a6d2bc046c1618f8484e07c06f9e4881ff38f91.jpg",
+          "caption": "",
+          "body": "",
+          "layout": "square",
+          "sortOrder": 11
+        },
+        {
+          "id": "frame-1793914529613",
+          "mediaType": "image",
+          "src": "/uploads/c009beb82af677e2c5aa501e7342f768f9c98a6e50e524972594d28721aee938.jpg",
+          "caption": "",
+          "body": "",
+          "layout": "square",
+          "sortOrder": 12
+        },
+        {
+          "id": "frame-1793914528397",
+          "mediaType": "image",
+          "src": "/uploads/39cae4cdb3b66c15ce32ed933c312ad3c1d43f89299d55206fdc810b52752eed.jpg",
+          "caption": "",
+          "body": "",
+          "layout": "square",
+          "sortOrder": 13
+        },
+        {
+          "id": "frame-1793915007110",
+          "mediaType": "image",
+          "src": "/uploads/d5c5039127b88d3aecc2aa07681296d9a6d24f3a512fe78453dbf6c20ad34fcb.jpg",
+          "caption": "",
+          "body": "",
+          "layout": "square",
+          "sortOrder": 14
+        },
+        {
+          "id": "frame-1793915008334",
+          "mediaType": "image",
+          "src": "/uploads/410fd01d7688eab639a4ceb9922c1834b2d8acee7f6facc45df4b598cc59b597.jpg",
+          "caption": "",
+          "body": "",
+          "layout": "square",
+          "sortOrder": 15
+        },
+        {
+          "id": "frame-1793915008614",
+          "mediaType": "image",
+          "src": "/uploads/b7b53f895c81c9d44e84571cd5dc18137822d78f7a11583868cc494ff7028730.jpg",
+          "caption": "",
+          "body": "",
+          "layout": "square",
+          "sortOrder": 16
+        },
+        {
+          "id": "frame-1793915008800",
+          "mediaType": "image",
+          "src": "/uploads/92e61d220ff3b2a09a40290a81bce366fd8f553aa5be29e020c7712f92ce028c.jpg",
+          "caption": "",
+          "body": "",
+          "layout": "square",
+          "sortOrder": 17
+        },
+        {
+          "id": "frame-1793915008966",
+          "mediaType": "image",
+          "src": "/uploads/8dfa959fb48f974c00bbc8a0b78f4e2942061cc1ff6bdce76add05c7fc2612c3.jpg",
+          "caption": "",
+          "body": "",
+          "layout": "square",
+          "sortOrder": 18
+        },
+        {
+          "id": "frame-1793915007437",
+          "mediaType": "image",
+          "src": "/uploads/039a2c306f4494984d0379a3d8d91482d92e51cc9819938f01bf51f4d9e9085a.jpg",
+          "caption": "",
+          "body": "",
+          "layout": "square",
+          "sortOrder": 19
+        },
+        {
+          "id": "frame-1793977157982",
+          "mediaType": "image",
+          "src": "/uploads/0754865d330b749f2f9a0ce1030116bf1ece8aa99bd81c872729f740d539b1c3.jpg",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 20
+        },
+        {
+          "id": "frame-1793977158330",
+          "mediaType": "image",
+          "src": "/uploads/ecaa6260a2d9fe92c5176034675e5ad4bbdcc87402050e4dcf2562d84664f246.jpg",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 21
+        },
+        {
+          "id": "frame-1793977158569",
+          "mediaType": "image",
+          "src": "/uploads/4e2c1675a91829073f773d904da83629be677421fe1723913b047af11c58cd44.jpg",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 22
+        },
+        {
+          "id": "frame-1793977159833",
+          "mediaType": "image",
+          "src": "/uploads/e7f77a507df23c4c10e418735a5960fb9bec7028731af03f33b2fc9c5fd9daa4.jpg",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 23
+        },
+        {
+          "id": "frame-1793915009134",
+          "mediaType": "image",
+          "src": "/uploads/fd8f99de6088b3b41bbe0f34f6fcf30da471760d79eca3bd364fda299f228528.jpg",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 24
+        }
+      ],
+      "pageURL": "gallery.html",
+      "featured": false,
+      "published": true,
+      "sortOrder": 6,
+      "theme": "dark"
+    },
+    {
+      "id": "project-1793977505825",
+      "index": "10",
+      "label": "Identidade Visual",
+      "title": "BNI SELO 20 ANOS",
+      "tag": "IMAGEM / MOVIMENTO",
+      "description": "Um novo fragmento em movimento.",
+      "role": "DIRECÇÃO VISUAL",
+      "location": "LUANDA / MUNDO",
+      "year": "2026",
+      "duration": 10,
+      "video": "",
+      "coverImage": "/uploads/1b62f21d767f4024cc020d678ba3ec0120033023f8783ba2221edbb4b0fd1888.png",
+      "coverVideo": "",
+      "template": "cinematic",
+      "theme": "light",
+      "frames": [
+        {
+          "id": "frame-1793977546608",
+          "mediaType": "image",
+          "src": "/uploads/635713e48f8811b3b3cd4557f02a3ea29a407365eb9781d7d1709d60112f5fb0.png",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 0
+        },
+        {
+          "id": "frame-1793977579176",
+          "mediaType": "image",
+          "src": "/uploads/13f6f5e0542e2948e69d56abf79d6cbac94cfbec155fa85efd35b6c9d2136617.png",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 1
+        },
+        {
+          "id": "frame-1793977579432",
+          "mediaType": "image",
+          "src": "/uploads/86451da17ed390e2a9a74b54c17aa85fcca98e3d158469b1ac932a5bcb2bc926.png",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 2
+        },
+        {
+          "id": "frame-1793977579624",
+          "mediaType": "image",
+          "src": "/uploads/a0d8cd77a48c89acb41ca9413dfa5afc84153c2bc5da73c383a06eefbf08dbe5.png",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 3
+        },
+        {
+          "id": "frame-1793977579824",
+          "mediaType": "image",
+          "src": "/uploads/fd074f778f5624b4aec96946e9b2f2b1fd2ef6cfeaa3e2bc1ec38ae241728b16.png",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 4
+        },
+        {
+          "id": "frame-1793977580216",
+          "mediaType": "image",
+          "src": "/uploads/94c188de109bd73e069ea7fb9684da672d8d6936568e4dc30aff1a33473f9ac6.png",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 5
+        },
+        {
+          "id": "frame-1793977580408",
+          "mediaType": "image",
+          "src": "/uploads/d6c4adb527f5f4eabb6cb7e91d9610cc9036c2f9a89247ccf4d73bfa193da643.png",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 6
+        },
+        {
+          "id": "frame-1793977580592",
+          "mediaType": "image",
+          "src": "/uploads/e17b94149157f775aa17b11257c7fe8136811d6a5c31df3045a7fffefd900955.png",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 7
+        },
+        {
+          "id": "frame-1793977580776",
+          "mediaType": "image",
+          "src": "/uploads/5cc2ca52c09ae3a0c290464f506b4a3f7401acac8527fbb0c04ad4f996f85714.png",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 8
+        },
+        {
+          "id": "frame-1793977580954",
+          "mediaType": "image",
+          "src": "/uploads/d07246f5e376d9d5fba3acdd4c78dcf41b6ecb7df11b7f7900b207074f105445.png",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 9
+        },
+        {
+          "id": "frame-1793977581137",
+          "mediaType": "image",
+          "src": "/uploads/67004a77ac19a14309bbc398be57fff2912d2c438f5392029eae2689b9a0d23e.png",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 10
+        },
+        {
+          "id": "frame-1793977581328",
+          "mediaType": "image",
+          "src": "/uploads/553e7bc75836b2edc4486808879f8a2bfd3904a263271034f9bfc38b51d9810a.png",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 11
+        },
+        {
+          "id": "frame-1793977581512",
+          "mediaType": "image",
+          "src": "/uploads/15c502e2b839af9a1c7081b70a6dd7a0f80d10e8f4a11c13945757b2265063e1.png",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 12
+        },
+        {
+          "id": "frame-1793977581760",
+          "mediaType": "image",
+          "src": "/uploads/6b22d71a3ced8013b10c329f22456fc1db26d40fed5c7b397649e8bf17660ed5.png",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 13
+        },
+        {
+          "id": "frame-1793979542468",
+          "mediaType": "image",
+          "src": "/uploads/79e578ed5fbcae6ebc652a4c026e8f35f65dc0bfcb3c7a23c23671304abbbfda.png",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 14
+        },
+        {
+          "id": "frame-1793979543324",
+          "mediaType": "image",
+          "src": "/uploads/093224af29dfecf7398179ce6198973bc1b23380348e136c3dd8dfa70cb50c13.png",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 15
+        },
+        {
+          "id": "frame-1793979543676",
+          "mediaType": "image",
+          "src": "/uploads/3455dc37a0f609a157afbe0327f4c720efdfa1f079dcab27efe9b5cdb63593e2.png",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 16
+        },
+        {
+          "id": "frame-1793979543924",
+          "mediaType": "image",
+          "src": "/uploads/718d2123d4a646820931d1596faa6c8df8eacb788a5c58c1197deb7509cf96ed.png",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 17
+        },
+        {
+          "id": "frame-1793979544157",
+          "mediaType": "image",
+          "src": "/uploads/5d1e6ba9bcc7bd9e65aab51980d6cbbb37fa56aa3703925062cff368c6d2e1ed.png",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 18
+        },
+        {
+          "id": "frame-1793979544388",
+          "mediaType": "image",
+          "src": "/uploads/b4da582c99a2986185c07167fed1a074214a108109088fcbf27397af6d276872.png",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 19
+        },
+        {
+          "id": "frame-1793979544612",
+          "mediaType": "image",
+          "src": "/uploads/df5908ea6c5594eb33511c34e23556ca3335c1c832c8f659762880132c7b5aac.png",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 20
+        },
+        {
+          "id": "frame-1793979544812",
+          "mediaType": "image",
+          "src": "/uploads/de540a500c7036627997bf7739875dcaff53e80a1622718fda1af7294745fa54.png",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 21
+        }
+      ],
+      "pageURL": "",
+      "featured": true,
+      "published": true,
+      "sortOrder": 99
+    },
+    {
+      "id": "project-1794229461463",
+      "index": "11",
+      "label": "Identidade Visual",
+      "title": " Universo Digital",
+      "tag": "",
+      "description": "Um novo fragmento em movimento.",
+      "role": "DIRECÇÃO VISUAL",
+      "location": "LUANDA / MUNDO",
+      "year": "2026",
+      "duration": 10,
+      "video": "",
+      "coverImage": "/uploads/0efcf927cd29c11ef751b4358014d512fc347a33f723657f40036c4619a9ff07.png",
+      "coverVideo": "",
+      "template": "cinematic",
+      "theme": "dark",
+      "frames": [
+        {
+          "id": "frame-1794229641512",
+          "mediaType": "image",
+          "src": "/uploads/e3207d69b6b36b7df20ee54437fc9a9022193abd69af4ea40190ef0156b6a2d0.png",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 0
+        }
+      ],
+      "pageURL": "",
+      "featured": false,
+      "published": true,
+      "sortOrder": 99
+    },
+    {
+      "id": "project-1794230981464",
+      "index": "12",
+      "label": "Identidade Visual",
+      "title": "ÁFRICA Fashion Time",
+      "tag": "IMAGEM / MOVIMENTO",
+      "description": "Um novo fragmento em movimento.",
+      "role": "DIRECÇÃO VISUAL",
+      "location": "LUANDA / MUNDO",
+      "year": "2026",
+      "duration": 10,
+      "video": "",
+      "coverImage": "/uploads/a3d498759275d8f84e53cec93a2e37f040f16132a51b8a2ad01ea610c54c3f7a.png",
+      "coverVideo": "",
+      "template": "cinematic",
+      "theme": "light",
+      "frames": [
+        {
+          "id": "frame-1794231358705",
+          "mediaType": "image",
+          "src": "/uploads/46fb7e715ee5e7a7684f1c1b5d88c7c4397d6383b27ccfc6745c01db9b2a9c89.png",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 0
+        },
+        {
+          "id": "frame-1794231390016",
+          "mediaType": "image",
+          "src": "/uploads/73a1058f73da775a2899bcdc814f0aa28c32dc6133d14f49c4c665e6bd3d6f98.png",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 1
+        },
+        {
+          "id": "frame-1794231430665",
+          "mediaType": "image",
+          "src": "/uploads/ddb478881bc8eaa8c213c1aaf45079a5b520a431d6f4bd0f52e6ab30c604612c.png",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 2
+        },
+        {
+          "id": "frame-1794231430905",
+          "mediaType": "image",
+          "src": "/uploads/8dad6da597958718fda3eb419fce19041c5b7600112041e0805b2beff43d33b5.png",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 3
+        },
+        {
+          "id": "frame-1794231431081",
+          "mediaType": "image",
+          "src": "/uploads/ddbee3243f397a70b9009bbb6e452d7d8020e20a97d90c08c646a0cb98f115b1.png",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 4
+        },
+        {
+          "id": "frame-1794231431448",
+          "mediaType": "image",
+          "src": "/uploads/5e97447638724c725461f15da81aa4a90b0af9f1808a981171ea7b59ff108170.png",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 5
+        },
+        {
+          "id": "frame-1794231431608",
+          "mediaType": "image",
+          "src": "/uploads/6cabc85dda4ea0a71bc1a3a5891564573446c940d1834410bffeafe39c7c6076.png",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 6
+        }
+      ],
+      "pageURL": "",
+      "featured": false,
+      "published": true,
+      "sortOrder": 99
+    }
+  ],
+  "homepage": {
+    "backgroundVideo": "",
+    "liveFrameBackgroundVideo": "/uploads/c8df4cb6ec5a51ca4ec40e7acb991a85f87d4f8e53b17638adc5fe32e10aa33f.mp4",
+    "slideKicker": "KAVITA UCHILA",
+    "slideItems": [
+      "IMAGEM COM PULSO",
+      "DIRECÇÃO VISUAL",
+      "MOTION DESIGN",
+      "3D & CONCEITO"
+    ],
+    "reelVideoUrls": [
+      "/uploads/057e0a21b386326415e84b36532d5723e0d29860bcc9443e603efde32d292287.mp4",
+      "/uploads/0df55c67a9b06eb98f92d97d6166d9d2d7e65376cdff2d27be27a218ad5fc1dc.mp4",
+      "/uploads/b135e9c8d89e5b124bd826d662afd14f9a6c14b43d26d43e559b442b52bcb85a.mp4"
+    ],
+    "flowVideoUrls": [
+      "/uploads/5cfe9e0ae88b2b3ca68dcac79db7bb7968a4f0d8e744b4429a943b7d4f118b71.mp4",
+      "/uploads/3c3a2bfb42c6ef6776069f6d40f9fa3649d2d20efa8dd24ad88ce0761571bb02.mp4",
+      "/uploads/acee6c581f63eaba88305792277f02b63aed6aaadff69fb6c89d0ef9607f615c.mp4"
+    ],
+    "aboutEyebrow": "SOBRE / GERSON GEREMIAS UCHILA",
+    "aboutStamp": "TAMBÉM KAVITA UCHILA",
+    "aboutImage": "",
+    "aboutHeadline": "Duas forças movem cada frame: uma ideia visual com impacto e código que a faz funcionar.",
+    "aboutBody": "A paixão por videojogos, cinema, modelação 3D e criação de conceitos levou Gerson Geremias Uchila a construir universos visuais para marcas, música, cultura e pessoas. Hoje trabalha de forma independente, com a pequena equipa Planilha, juntando direção visual, motion, 3D, design e novas ferramentas de inteligência artificial.",
+    "aboutSignature": "Gerson Geremias Uchila\nDiretor visual · artista 3D · tecnólogo criativo",
+    "aboutSmall": "LUANDA / MUNDO",
+    "aboutPortfolio": [
+      {
+        "label": "DESIGN GRÁFICO",
+        "items": "Universo Digital TV · Optims · Chimuma · Kolapo Arquitectura · Convénios Solution · Fab Pro · Moldar · FTE · Koolba"
+      },
+      {
+        "label": "AUDIOVISUAL / MOTION",
+        "items": "FTE Video Promo · Kanuca · Missão Angola · Ginástica Na Minha Banda"
+      },
+      {
+        "label": "ARTE 3D",
+        "items": "Design de interiores · Kolapo · Trabalhos pessoais · ZBrush"
+      },
+      {
+        "label": "STARTUPS",
+        "items": "Vab · Skikies · Farmy dos Criadores"
+      },
+      {
+        "label": "GALERIAS / EVENTOS",
+        "items": "Expo Recicla · FTE · Morna"
+      }
+    ],
+    "aboutFooterLeft": "KAVITA UCHILA",
+    "aboutFooterHeadline": "IMAGEM COM PULSO",
+    "aboutFooterRight": "LUANDA / MUNDO"
+  },
+  "gallery": [],
+  "galleryCoverImage": "",
+  "galleryCoverVideo": ""
+}

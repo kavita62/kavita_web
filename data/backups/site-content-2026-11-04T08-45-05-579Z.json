@@ -1,0 +1,151 @@
+{
+  "projects": [
+    {
+      "id": "piano-40390",
+      "index": "01",
+      "label": "Identidade Visual",
+      "title": "Rebrading Chimuma",
+      "tag": "ESTÚDIO / RITMO",
+      "description": "Um estudo táctil de mãos, ritmo e da electricidade silenciosa de uma sala antes da primeira nota.",
+      "role": "DIRECÇÃO VISUAL / IMAGEM EM MOVIMENTO",
+      "location": "LUANDA / MUNDO",
+      "year": "2026",
+      "duration": 20,
+      "video": "/uploads/b0c4065db2031879d174a6020486935c.mp4",
+      "coverImage": "",
+      "coverVideo": "/uploads/248aa26537140c1cdb9008a0c01be256.mp4",
+      "template": "cinematic",
+      "frames": [
+        {
+          "id": "frame-1793752568894",
+          "mediaType": "video",
+          "src": "/uploads/f4f7a3d8a2b8f6af98d378e7bf39cfdb.mp4",
+          "caption": "",
+          "body": "",
+          "layout": "wide",
+          "sortOrder": 0
+        }
+      ],
+      "pageURL": "",
+      "featured": false,
+      "published": true,
+      "sortOrder": 0
+    },
+    {
+      "id": "dance-75547",
+      "index": "03",
+      "label": "MOVIMENTO",
+      "title": "Corpos no frame",
+      "tag": "PERFORMANCE / ENERGIA",
+      "description": "Corpos em movimento, cortados pelo beat. Um fragmento sobre energia, libertação e a forma de um gesto.",
+      "role": "PERFORMANCE / EDITORIAL",
+      "location": "LUANDA / MUNDO",
+      "year": "2026",
+      "duration": 17,
+      "video": "/uploads/337c6bb7656e0e7ba420dcd174a18877.mp4",
+      "coverImage": "",
+      "coverVideo": "/uploads/49ed263e23981a2733cbb5bf07e2867e.mp4",
+      "template": "gallery",
+      "frames": [],
+      "pageURL": "",
+      "featured": false,
+      "published": true,
+      "sortOrder": 2
+    },
+    {
+      "id": "dj-13071",
+      "index": "05",
+      "label": "Ide",
+      "title": "Fab Pro",
+      "tag": "MÚSICA / ATITUDE",
+      "description": "Depois do beat, a imagem continua a mover-se. O som torna-se postura, cor e uma sala cheia de sinal.",
+      "role": "MÚSICA / SISTEMA VISUAL",
+      "location": "LUANDA / MUNDO",
+      "year": "2026",
+      "duration": 15,
+      "video": "https://cdn.pixabay.com/video/2017/11/26/13071-244835811_medium.mp4",
+      "coverImage": "",
+      "coverVideo": "",
+      "template": "cinematic",
+      "frames": [],
+      "pageURL": "",
+      "featured": false,
+      "published": true,
+      "sortOrder": 4
+    },
+    {
+      "id": "project-1793780085554",
+      "index": "04",
+      "label": "NOVO TRABALHO",
+      "title": "Nova imagem em movimento",
+      "tag": "IMAGEM / MOVIMENTO",
+      "description": "Um novo fragmento em movimento.",
+      "role": "DIRECÇÃO VISUAL",
+      "location": "LUANDA / MUNDO",
+      "year": "2026",
+      "duration": 10,
+      "video": "",
+      "coverImage": "",
+      "coverVideo": "",
+      "template": "cinematic",
+      "frames": [],
+      "pageURL": "",
+      "featured": false,
+      "published": false,
+      "sortOrder": 99
+    }
+  ],
+  "homepage": {
+    "backgroundVideo": "",
+    "liveFrameBackgroundVideo": "/uploads/1aab648e204db751a467e346226036cd.mp4",
+    "slideKicker": "KAVITA UCHILA",
+    "slideItems": [
+      "IMAGEM COM PULSO",
+      "DIRECÇÃO VISUAL",
+      "MOTION DESIGN",
+      "3D & CONCEITO"
+    ],
+    "reelVideoUrls": [
+      "/uploads/3e0592929b59a49593584a2042adbb0f.mp4",
+      "/uploads/d8828a282542a576f85c56ca7cbe7c68.mp4",
+      "/uploads/44621f392ff0e42d7fd5267a8056479c.mp4"
+    ],
+    "flowVideoUrls": [
+      "/uploads/f42048ead6a191c71923910b927a40bf.mp4",
+      "/uploads/7609f56670793d10dec5f7291049ae78.mp4",
+      "/uploads/b446ec0732e4938465873b898154c9ef.mp4"
+    ],
+    "aboutEyebrow": "SOBRE / GERSON GEREMIAS UCHILA",
+    "aboutStamp": "TAMBÉM KAVITA UCHILA",
+    "aboutImage": "",
+    "aboutHeadline": "Duas forças movem cada frame: uma ideia visual com impacto e código que a faz funcionar.",
+    "aboutBody": "A paixão por videojogos, cinema, modelação 3D e criação de conceitos levou Gerson Geremias Uchila a construir universos visuais para marcas, música, cultura e pessoas. Hoje trabalha de forma independente, com a pequena equipa Planilha, juntando direção visual, motion, 3D, design e novas ferramentas de inteligência artificial.",
+    "aboutSignature": "Gerson Geremias Uchila\nDiretor visual · artista 3D · tecnólogo criativo",
+    "aboutSmall": "LUANDA / MUNDO",
+    "aboutPortfolio": [
+      {
+        "label": "DESIGN GRÁFICO",
+        "items": "Universo Digital TV · Optims · Chimuma · Kolapo Arquitectura · Convénios Solution · Fab Pro · Moldar · FTE · Koolba"
+      },
+      {
+        "label": "AUDIOVISUAL / MOTION",
+        "items": "FTE Video Promo · Kanuca · Missão Angola · Ginástica Na Minha Banda"
+      },
+      {
+        "label": "ARTE 3D",
+        "items": "Design de interiores · Kolapo · Trabalhos pessoais · ZBrush"
+      },
+      {
+        "label": "STARTUPS",
+        "items": "Vab · Skikies · Farmy dos Criadores"
+      },
+      {
+        "label": "GALERIAS / EVENTOS",
+        "items": "Expo Recicla · FTE · Morna"
+      }
+    ],
+    "aboutFooterLeft": "KAVITA UCHILA",
+    "aboutFooterHeadline": "IMAGEM COM PULSO",
+    "aboutFooterRight": "LUANDA / MUNDO"
+  }
+}
