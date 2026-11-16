@@ -1,5 +1,7 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "installCommand": "echo 'Skipping install: static site + zero-dependency API function'",
+  "buildCommand": "echo 'Skipping build: static site + zero-dependency API function'",
   "rewrites": [
     { "source": "/", "destination": "/preview.html" },
     { "source": "/preview", "destination": "/preview.html" }

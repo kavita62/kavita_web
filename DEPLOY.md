@@ -6,7 +6,9 @@ não persiste alterações (filesystem da Vercel é read-only).
 ## O que já está preparado no projeto
 
 - `.gitignore` — exclui `node_modules/`, temporários, logs, `optimized/` (168 MB, ainda não usado)
-- `vercel.json` — reescreve `/` e `/preview` para `preview.html`
+- `vercel.json` — reescreve `/` e `/preview` para `preview.html`, e **desativa install/build**
+  da Vercel (o `pnpm-lock.yaml` está desatualizado face ao `package.json`, e o deploy
+  não precisa de dependências: é site estático + uma função Node sem dependências)
 - `api/site-content.js` — expõe `data/site-content.json` em `/api/site-content`
 - `uploads/` (293 MB) permanece no repo — é usado pelo site
 
@@ -52,8 +54,14 @@ Para autenticar em HTTPS, o GitHub exige um **Personal Access Token** como passw
    (se não aparecer, autoriza a GitHub App da Vercel na conta/organização)
 3. Framework Preset: **Other**
 4. Root Directory: `./`
-5. Build Command: **vazio**  |  Output Directory: **vazio**
+5. Build Command e Install Command: **vazios** (já ignorados via `vercel.json`)
+   |  Output Directory: **vazio**
 6. Clica **Deploy**
+
+> Se a Vercel ainda correr `pnpm install` e der `ERR_PNPM_OUTDATED_LOCKFILE`, confirma
+> que o `vercel.json` da pasta raiz foi incluído no push. Alternativa: apagar
+> `pnpm-lock.yaml` e `package-lock.json` do repo, ou regenerar o lockfile com
+> `pnpm install --no-frozen-lockfile`.
 
 ### Opção B — CLI
 ```bash
